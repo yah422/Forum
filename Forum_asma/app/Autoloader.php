@@ -1,5 +1,6 @@
 <?php
 namespace App;
+// ^^ <!-- Autoloader.php : permet un auto-chargement des classes du projet (appelé dans index.php) -->
 
 class Autoloader{
 

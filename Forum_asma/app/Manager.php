@@ -1,6 +1,9 @@
 <?php
 namespace App;
 
+// ^^ Manager.php : fournit les méthodes permettant de renvoyer les résultats du Manager vers le Controller correspondant
+
+
 abstract class Manager{
 
     protected function connect(){

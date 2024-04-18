@@ -1,6 +1,10 @@
 <?php
 namespace App;
 
+// ^^ Session.php : fournit les méthodes relatives à la session (messages flash et gestion des utilisateurs) 
+// ^^ La méthode suivante permet de vérifier qu'un utilisateur est bien connecté :
+
+
 class Session{
 
     private static $categories = ['error', 'success'];

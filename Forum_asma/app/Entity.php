@@ -1,6 +1,10 @@
 <?php
 namespace App;
 
+//^^ Entity.php : fournit la méthode d'hydratation des instances de classes du projet 
+// ^^ (transformer un tableau associatif en objet ou collection d'objets comme le ferait un ORM comme Doctrine dans Symfony)
+
+
 abstract class Entity{
 
     protected function hydrate($data){

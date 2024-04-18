@@ -1,6 +1,8 @@
 <?php
 namespace App;
 
+// ^^ DAO.php : fournit toutes les méthodes génériques qui interagissent avec la base de données : connexion, SELECT, INSERT, UPDATE, DELETE
+
 /**
  * Classe d'accès aux données de la BDD, abstraite
  * 
@@ -13,7 +15,7 @@ namespace App;
 abstract class DAO{
 
     private static $host   = 'mysql:host=127.0.0.1;port=3306';
-    private static $dbname = 'forummvc_v2';
+    private static $dbname = 'forum_asma';
     private static $dbuser = 'root';
     private static $dbpass = '';
 
