@@ -82,3 +82,27 @@
     color: white;
 
 }
+
+#latestTopic {
+    width: 100%;
+    height: 350px;
+
+}
+
+#community {
+    width: 100%;
+    height: 100px;
+    background-color: white;
+
+}
+
+#Discover {
+    width: 100%;
+    height: 500px;
+}
+
+#Activate {
+    width: 100%;
+    height: 500px;
+    background-color: white;
+}

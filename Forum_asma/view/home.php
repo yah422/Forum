@@ -5,7 +5,29 @@
     </div>
 </section>
 
-<p>
-    <a href="index.php?ctrl=security&action=login">Se connecter</a>
-    <a href="index.php?ctrl=security&action=register">S'inscrire</a>
-</p>
+<section id="latestTopic">
+
+
+</section>
+
+<section id="community">
+
+
+</section>
+
+<section id="Discover">
+
+
+</section>
+
+<section id="Activate">
+
+
+</section>
+
+<section>
+    <p>
+        <a href="index.php?ctrl=security&action=login">Se connecter</a>
+        <a href="index.php?ctrl=security&action=register">S'inscrire</a>
+    </p>
+</section>
