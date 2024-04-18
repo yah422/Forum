@@ -6,7 +6,24 @@
 </section>
 
 <section id="latestTopic">
+    <div id="div1">
+        <div class="lateTopic">
 
+        </div>
+
+        <div class="lateTopic">
+
+        </div>
+    </div>
+    <div id="div2">
+        <div class="lateTopic">
+
+        </div>
+
+        <div class="lateTopic">
+
+        </div>
+    </div>
 
 </section>
 
