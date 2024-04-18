@@ -62,7 +62,7 @@
 }
 #HomePage_header {
     width: 100%;
-    height: 700px;
+    height: 800px;
     background-color: #09143B;
     display: flex;
     flex-direction: column;
@@ -91,7 +91,7 @@
     align-content: center;
     justify-content: center;
     align-items: center;
-    gap: 100px;
+    gap: 250px;
 
 }
 
