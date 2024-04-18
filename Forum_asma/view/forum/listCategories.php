@@ -4,15 +4,17 @@ $categories = $result["data"]['categories']; //récupère les données envoyées
     
 ?>
     <h1>Categories</h1>
-    
-    <?php
-        
-        foreach($categories as $category){
-        ?>
-        <div class="categories">
-            <p><b><a href="index.php?ctrl=topic&action=listTopicsByCategory&id=<?= $category->getId() ?>"><?=$category->getCategoryName()?></a></b></p>
-                
         <?php
+            
+            foreach($categories as $category){
+            ?>
+            <a href="index.php?ctrl=topic&action=listTopicsByCategory&id=<?= $category->getId() ?>"> 
+                <div class="categories">
+                    <p><b><?=$category->getCategoryName()?></b></p>
+                </div> 
+            </a>
+            <?php
+            }
+   
 
-}
 
