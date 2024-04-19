@@ -18,12 +18,12 @@ final class Topic extends Entity{
     private $creationDate;
     private $closed;
 
-    // METHODE CONSTRUCT DE TOPIC
+ // METHODE CONSTRUCT DE TOPIC
     public function __construct($data){         
         $this->hydrate($data);        
     }
 
-    // GET ET SET DE L'ID
+// GET ET SET DE L'ID
     public function getId(){
         return $this->id;
     }
@@ -32,7 +32,7 @@ final class Topic extends Entity{
         return $this;
     }
 
-    // GET ET SET DU TITRE
+// GET ET SET DU TITRE
     public function getTitle(){
         return $this->title;
     } 
@@ -41,7 +41,7 @@ final class Topic extends Entity{
         return $this;
     }
 
-    // GET ET SET DU USER
+// GET ET SET DU USER
     public function getUser(){
         return $this->user;
     }
@@ -50,8 +50,50 @@ final class Topic extends Entity{
         return $this;
     }
 
-    // METHODE TOOSTRING POUR L'AFFICHAGE
-    public function __toString(){
-        return $this->title;
+// GET ET SET DE CATEGORY
+    public function getCategory()
+    {
+        return $this->category;
     }
+    public function setCategory($category)
+    {
+        $this->category = $category;
+
+        return $this;
+    }
+    
+// GET ET SET DE CREATIONDATE
+    public function getCreationDate()
+    {
+        return $this->creationDate;
+    }
+    public function setCreationDate($creationDate)
+    {
+        $this->creationDate = $creationDate;
+
+        return $this;
+    }
+    
+// GET ET SET DE CLOSED
+    public function getClosed()
+    {
+        return $this->closed;
+    }
+    public function setClosed($closed)
+    {
+        $this->closed = $closed;
+
+        return $this;
+    }
+
+// METHODE TOOSTRING POUR L'AFFICHAGE
+    // public function __toString(){
+
+    //     return 
+    //         $this->title;
+    //         $this->user;
+    //         $this->creationDate;
+    // }
+
+    
 }
