@@ -1,64 +1,78 @@
 <?php
-namespace Model\Entities;
 
-use App\Entity;
+    namespace Model\Entities;
 
-/*
-    En programmation orientée objet, une classe finale (final class) est une classe que vous ne pouvez pas étendre, 
-    c'est-à-dire qu'aucune autre classe ne peut hériter de cette classe. 
-    En d'autres termes, une classe finale ne peut pas être utilisée comme classe parente.
-*/
+    use App\Entity;
 
-final class Post extends Entity{
+    final class Post extends Entity{
 
-    private $id;
-    private $content;
-    private $creationDate;
-   
-
-    // METHODE CONSTRUCT DE TOPIC
-    public function __construct($data){         
-        $this->hydrate($data);        
-    }
-
-
+        private $id;
+        private $content;
+        private $creationDate;
+        private $user;
+        private $topic;
+        
+    //  CONSTRUCT
+        public function __construct($data){         
+            $this->hydrate($data);        
+        }
+            
     // GET ET SET DE ID
-    public function getId()
-    {
-        return $this->id;
-    }
-    public function setId($id)
-    {
-        $this->id = $id;
+        public function getId()
+        {
+            return $this->id;
+        } 
+        public function setId($id)
+        {
+            $this->id = $id;
+            
+            return $this;
+        }
 
-        return $this;
-    }
-    
+    //  GET ET SET DE CONTENT
+        public function getContent()
+        {
+            return $this->content;
+        }
+        public function setContent($content)
+        {
+            $this->content = $content;
+            
+            return $this;
+        }
 
-     // GET ET SET DE CONTENT
-    public function getContent()
-    {
-        return $this->content;
-    }
-    public function setContent($content)
-    {
-        $this->content = $content;
+    // GET ET SET DE CREATIONDATE
+        public function getCreationDate(){
+            $formattedDate = $this->creationDate->format("d/m/Y, H:i:s");
+            return $formattedDate;
+        }
+        public function setCreationDate($date){
+            $this->creationDate = new \DateTime($date);
+            return $this;
+        }
 
-        return $this;
-    }
+    // GET ET SET DE USER
+        public function getUser(){
 
-    
-    // GET ET SET DE DATECREATION
-    public function getCreationDate()
-    {
-        return $this->creationDate;
-    }
-    public function setCreationDate($creationDate)
-    {
-        $this->creationDate = $creationDate;
+            return $this->user;
+        }
 
-        return $this;
-    }
+        public function setUser($user){
 
-    
-}
+            $this->user = $user;
+
+            return $this;
+        }
+
+    // GET ET SET DE TOPIC
+        public function getTopic(){
+
+            return $this->topic;
+        }
+        public function setTopic($topic){
+
+            $this->topic = $topic;
+
+            return $this;
+        }
+    }

@@ -14,7 +14,7 @@ class TopicManager extends Manager{
         parent::connect();
     }
 
-    // récupérer tous les topics d'une catégorie spécifique (par son id)
+    // récupérer tous les post d'un topic spécifique (par son id)
     public function topicsByCategory($id) {
 
         $sql = "SELECT * 
