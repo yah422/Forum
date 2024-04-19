@@ -2,42 +2,46 @@
         $posts = $result['data']['posts'];
         $topic = $result['data']['topic'];
 ?>
-        <h1><?= $topic->getName()?></h1>
-        <h2><?= $topic->getQuestion()?></h2>
-        <p><a href="index.php?ctrl=security&action=login">Log in</a> to edit a post</p>
-<div class="posts-container">
 
-<?php
+<div id="titreTopic">
+    <h1 id="h1Topic"><?= $topic->getName()?></h1>
+    <h2><?= $topic->getQuestion()?></h2>
+    <p><a href="index.php?ctrl=security&action=login">Log in</a> to edit a post</p>
+</div>
+
+<div class="postsWrap">
+
+    <?php
         if($posts == null){
-                echo "<p>0 POST</p>";
+                echo "<p>PAS DE POST</p>";
         } else {
 
-        foreach($posts as $post){
-?>
-        <p><?=$post->getContent()?></a></p>
-        <p><?=$post->getCreationDate()?></p>
-        <p><?=$post->getUser()->getUsername()?></a></p>
+            foreach($posts as $post){
+        ?>
+                <p><?=$post->getContent()?></p>
+                <p><?=$post->getCreationDate()?></p>
+                <p><?=$post->getUser()->getUserName()?></p>
 
-        <?php
-        if(isset($_SESSION['user'])){
-                
-                if(App\Session::isAdmin()){
-                        // var_dump($_SESSION['user']);die;
-?>
+            <?php
+                if(isset($_SESSION['user'])){
+                    
+                    if(App\Session::isAdmin()){
+                            // var_dump($_SESSION['user']);die;
+        ?>
                         <button><a href="index.php?ctrl=post&action=deletePost&id=<?=  $post->getId() ?>">Delete this post</a></button>
-<?php
-                } elseif(App\Session::getUser() == $post->getUser()){
-?>
+            <?php
+                    } elseif(App\Session::getUser() == $post->getUser()){
+            ?>
                         <button><a href="index.php?ctrl=post&action=updatePost&id=<?=  $post->getId() ?>">Update</a></button>
                         <button><a href="index.php?ctrl=post&action=deletePost&id=<?=  $post->getId() ?>">Delete</a></button>
-<?php
-                } else {
-                        ?><button>Report this post</button><?php
+            <?php
+                    } else {
+                            ?><button>Report this post</button><?php
+                    }
                 }
+            }
         }
-}
-}
-?>
+    ?>
 
 </div>
 

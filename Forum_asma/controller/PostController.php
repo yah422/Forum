@@ -17,16 +17,20 @@
         }
 
         public function listPostsByTopics($id){
-
             $postManager = new PostManager();
             $topicManager = new TopicManager();
 
-            
-            $topics = $topicManager -> findOneById($id);
+            $topic =  $topicManager->findOneById($id);
 
-            $post = $postManager -> PostsByTopics($id);
-
-
-
+            if($topic) {
+                return [
+                    "metaDescription" => "Liste des posts par topic",
+                    "view" => VIEW_DIR."forum/listPost.php",
+                    "data" => [
+                    "posts" => $postManager->postsByTopic($id),
+                    "topic" => $topic
+                    ]
+                ];
+            }
         }
     }

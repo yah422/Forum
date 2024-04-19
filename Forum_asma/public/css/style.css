@@ -181,7 +181,7 @@
    color: white;
 }
 
-h1 {
+#forum h1 {
     margin-left: 60px;
 }
 
@@ -233,4 +233,16 @@ color: white;
     flex-wrap: wrap;
     gap: 50px;
 
+}
+
+#h1Topic {
+    margin-left: 60px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#titreTopic {
+    margin-left: 60px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }

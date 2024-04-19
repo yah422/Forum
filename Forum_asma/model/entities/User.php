@@ -38,8 +38,13 @@ final class User extends Entity{
         return $this;
     }
 
-    // METHODE TOOSTRING POUR L'AFFICHAGE
-    public function __toString() {
-        return $this->nickName;
+    // GET ET SET DE USERNAME
+    public function getUsername(){
+        return $this->username;
+    }
+    public function setUsername($username){
+        $this->username = $username;
+            
+        return $this;
     }
 }

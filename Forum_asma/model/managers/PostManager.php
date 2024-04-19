@@ -15,15 +15,14 @@ class PostManager extends Manager{
     }
 
      // récupérer tous les topics d'une catégorie spécifique (par son id)
-     public function PostsByTopics($id) {
+     public function postsByTopic($id){
 
-        $sql = "SELECT * 
-                FROM ".$this->tableName." t 
-                WHERE t.topic_id = :id";
-       
-        // la requête renvoie plusieurs enregistrements --> getMultipleResults
-        return  $this->getMultipleResults(
-            DAO::select($sql, ['id' => $id]), 
+        parent::connect();
+
+        $sql = "SELECT * FROM ".$this->tableName." WHERE topic_id = :id";
+
+        return $this->getMultipleResults(
+            DAO::select($sql, ['id'=>$id]),
             $this->className
         );
     }
