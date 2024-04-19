@@ -12,13 +12,18 @@ if($topics == null){
     echo " ";
 } else {
     ?>
-<?php
-foreach($topics as $topic ){ ?>
+<div id="wrapListTopic">
+    <?php
+    foreach($topics as $topic ){ ?>
 
-    <div id="cardTopic">
-        <h2><a href="index.php?ctrl=post&action=listPostsByTopics&id=<?= $topic->getId() ?>"><?=$topic->getName()?></a></h2>
-        <p><?=$topic->getQuestion()?></p>
-        <p><?=$topic->getCreationDate()?></p>
-    </div> 
+       <a href="index.php?ctrl=post&action=listPostsByTopics&id=<?= $topic->getId() ?>"> 
+            <div id="cardTopic">
+                <h2><?=$topic->getName()?></h2>
+                <p><?=$topic->getQuestion()?></p>
+                <p><?=$topic->getCreationDate()?></p>
+            </div> 
+        </a>
+
 <?php }
-}
+}?>
+</div>

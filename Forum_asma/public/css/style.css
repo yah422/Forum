@@ -195,7 +195,7 @@ h1 {
 
 #listTopic {
     color: #09143B;
-    font-size: large;
+    margin-bottom: 15px;
 }
 
 
@@ -215,10 +215,22 @@ h1 {
 
 #cardTopic h2 {
     color: white;
-    margin-left: 10px;
+    margin-left: 30px;
 }
 
 #cardTopic p {
     color: white;
-    margin-left: 10px;
+    margin-left: 30px;
+}
+
+#cardTopic a {
+text-decoration: none;
+color: white;
+}
+
+#wrapListTopic {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+
 }
