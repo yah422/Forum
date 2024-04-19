@@ -171,6 +171,7 @@
    text-align: center;
    text-decoration: none;
    color: white;
+   font-size: x-large;
 }
 
 #forum a {
@@ -187,7 +188,7 @@ h1 {
 #wrapTopic {
     display: flex;
     flex-wrap: wrap;
-    gap: 100px;
+    gap: 50px;
 }
 
 /* ^^ ------------------------------------------ LISTE ... ----------------------------------------------------- */
