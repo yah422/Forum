@@ -193,3 +193,32 @@ h1 {
 
 /* ^^ ------------------------------------------ LISTE TOPICS ----------------------------------------------------- */
 
+#listTopic {
+    color: #09143B;
+    font-size: large;
+}
+
+
+#cardTopic {
+    width: 403px;
+    height: 156px;
+    background-color: #09143B;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-left: 10px;
+    flex-wrap: wrap;
+
+}
+
+#cardTopic h2 {
+    color: white;
+    margin-left: 10px;
+}
+
+#cardTopic p {
+    color: white;
+    margin-left: 10px;
+}

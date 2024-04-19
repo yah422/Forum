@@ -14,9 +14,11 @@ if($topics == null){
     ?>
 <?php
 foreach($topics as $topic ){ ?>
-    <h2><a href="index.php?ctrl=post&action=listPostsByTopics&id=<?= $topic->getId() ?>"><?=$topic->getName()?></a></h2>
-    <p><?=$topic->getQuestion()?></p>
-    <p><?=$topic->getCreationDate()?></p>
-    
+
+    <div id="cardTopic">
+        <h2><a href="index.php?ctrl=post&action=listPostsByTopics&id=<?= $topic->getId() ?>"><?=$topic->getName()?></a></h2>
+        <p><?=$topic->getQuestion()?></p>
+        <p><?=$topic->getCreationDate()?></p>
+    </div> 
 <?php }
 }
