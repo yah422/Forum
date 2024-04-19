@@ -14,8 +14,8 @@ $categories = $result["data"]['categories']; //récupère les données envoyées
                     <p><b><?=$category->getCategoryName()?></b></p>
                 </div> 
             </a>
-    
-            <?php
+           
+            <?php 
             }?>
    </div>
 

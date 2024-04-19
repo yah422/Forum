@@ -20,11 +20,11 @@
             $topicManager = new TopicManager();
             $categoryManager = new CategoryManager();
             
-            $categorie = $categoryManager->findOneById($id);
+            $category = $categoryManager->findOneById($id);
 
             $topics = $topicManager->topicsByCategory($id);
 
-            if($categorie){
+            if($category){
 
                 if (isset($_POST['submitTopic'])){
 
@@ -44,7 +44,7 @@
                         "meta_description" => "Liste des Topics",
                         "data" => [
                         "topics" => $topics,
-                        "categorie" =>$categorie
+                        "category" =>$category
                         ]
                 ];
 
