@@ -9,7 +9,7 @@
     <p><a href="index.php?ctrl=security&action=login">Log in</a> to edit a post</p>
 </div>
 
-<div class="postsWrap">
+<div id="postsWrap">
 
     <?php
         if($posts == null){
