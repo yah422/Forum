@@ -13,6 +13,11 @@ final class User extends Entity{
 
     private $id;
     private $nickName;
+    private $username;
+    private $password;
+    private $registerDate;
+    private $role;
+    private $email;
 
     // METHODE CONSTRUCT DE USER
     public function __construct($data){         
@@ -43,8 +48,47 @@ final class User extends Entity{
         return $this->username;
     }
     public function setUsername($username){
-        $this->username = $username;
-            
+    $this->username = $username;
+        
+    return $this;
+    }
+
+    // GET ET SET DE PASSWORD
+    public function getPassword(){
+        return $this->password;
+    }
+    public function setPassword($password){
+        $this->password = $password;
+        return $this;
+    }
+
+    // GET ET SET DE REGISTER DATE
+    public function getRegisterDate(){
+        return $this->registerDate;
+    }
+    public function setRegisterDate($registerDate): self{
+        $this->registerDate = $registerDate;
+
+        return $this;
+    }
+
+    // GET ET SET DE ROLE
+    public function getRole(){
+        return $this->role;
+    }
+    public function setRole($role): self{
+        $this->role = $role;
+
+        return $this;
+    }
+
+    // GET ET SET DE EMAIL
+    public function getEmail(){
+        return $this->email;
+    }
+    public function setEmail($email): self{
+        $this->email = $email;
+
         return $this;
     }
 }
