@@ -28,8 +28,7 @@ class PostManager extends Manager{
     }
 
     public function listPostsByUser($id){
-
-        parent::connect();
+        
 
     }
 }
