@@ -7,9 +7,8 @@
 <div id="titreTopic">
     <h1 id="h1Topic"><?= $topic->getName()?></h1>
     <h2><?= $topic->getQuestion()?></h2>
-    <p><a href="index.php?ctrl=security&action=login">Se connecter pour modifier un post</a></p>
+    
 </div>
-
 <div id="postsWrap">
 
     <?php
@@ -21,7 +20,7 @@
         ?>
                 <p><?=$post->getContent()?></p>
                 <p><?=$post->getCreationDate()?></p>
-                <p><a href="index.php?ctrl=user&action=listTopicsAndPostsByUser&id=<?= $post->getUser()->getId()?>"><?=$post->getUser()->getUserName()?></a></p>
+                <p><a href="index.php?ctrl=user&action=listTopicsAndPostsByUser&id=<?= $post->getUser()->getId()?>"><?=$post->getUser()->getUserName()?></a></p><br>
 
             <?php
                 if(isset($_SESSION['user'])){
@@ -45,6 +44,7 @@
     ?>
 
 </div>
+        <p id="log"><a href="index.php?ctrl=security&action=login">Se connecter pour modifier un post</a></p>
 
 <?php
         if(isset($_SESSION['user'])){

@@ -247,6 +247,10 @@ color: white;
     margin-bottom: 10px;
 }
 
+#log a{
+    color: #09143B;
+}
+
 #postsWrap {
     display: flex;
     flex-direction: column;
@@ -261,5 +265,24 @@ color: white;
     padding-top: 30px;
 }
 
-/* ----------------------------- LIST POSTS BY TOPICS  -------------------------- */
+/* ----------------------------- LIST POSTS AND TOPICS BY USER  -------------------------- */
 
+.divTopPost {
+    width: 100%;
+    background-color: #D9D9D9;
+    padding: 30px;
+}
+
+.titreH {
+    margin-left: 30px;
+    color: #09143B;
+}
+
+#btC {
+    background-color: #D7E0EA;
+    border: #D7E0EA;
+}
+
+#btC a{
+    color: #09143B;
+}

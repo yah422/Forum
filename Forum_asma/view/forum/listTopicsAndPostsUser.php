@@ -3,9 +3,9 @@
     $posts = $result['data']['posts'];
 ?>
 
-    <h2>Topics crée par cet utilisateur </h2>
+    <h2 class="titreH">Topics crée par cet utilisateur </h2>
 
-    <div >
+    <div class="divTopPost">
 
         <?php
 
@@ -20,9 +20,9 @@
 ?>
 
     </div>
-    <h3>Posts crée par cet utilisateur</h3>
+    <h2 class="titreH">Posts crée par cet utilisateur</h2>
 
-    <div >
+    <div class="divTopPost">
 
         <?php
 
@@ -38,5 +38,5 @@
             }
         }
             ?>
-    <button><a href='index.php?ctrl=forum&action=index'> Retour à la liste des catégories </a></button>
-    </div>
+    </div>    
+    <button id="btC"><a href='index.php?ctrl=forum&action=index'> Retour à la liste des catégories </a></button>
