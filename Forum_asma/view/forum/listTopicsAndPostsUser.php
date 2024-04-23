@@ -14,7 +14,7 @@
         } else {
             foreach($topics as $topic){
                 echo "<p>".$topic->getName()."</p>";
-                echo "<p>".$topic->getCreationDate()."</p>";
+                echo "<p>".$topic->getCreationDate()."</p>";?> <br><?php
             }
         }
 ?>
@@ -34,7 +34,7 @@
         } else {
             foreach($posts as $post){
                 echo "<p>".$post->getContent()."</p>";
-                echo "<p>".$post->getCreationDate()."</p>";
+                echo "<p>".$post->getCreationDate()."</p>";?> <br><?php
             }
         }
             ?>
