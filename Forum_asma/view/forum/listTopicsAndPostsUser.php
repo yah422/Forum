@@ -10,7 +10,7 @@
         <?php
 
         if($topics == NULL){
-            echo "0 topic yet";
+            echo "0 topic";
         } else {
             foreach($topics as $topic){
                 echo "<p>".$topic->getName()."</p>";

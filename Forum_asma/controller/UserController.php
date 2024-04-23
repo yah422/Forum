@@ -32,22 +32,22 @@
             ];
         }
 
-            // public function userProfile($id){
+        public function userProfile($id){
 
-            //     $userManager = new UserManager;
-            //     $topicManager = new TopicManager;
-            //     $postManager = new PostManager;
-                
-            //     $topics = $topicManager->listTopicsByUser($id);
-            //     $posts = $postManager->listPostsByUser($id);
+            $userManager = new UserManager;
+            $topicManager = new TopicManager;
+            $postManager = new PostManager;
+            
+            $topics = $topicManager->listTopicsByUser($id);
+            $posts = $postManager->listPostsByUser($id);
 
-            //     return [
-            //         "view" => VIEW_DIR."forum/profile.php",
-            //         "data" => [
-            //             "topics" => $topics,
-            //             "posts" => $posts
-            //         ]
-            //     ];
+            return [
+                "view" => VIEW_DIR."forum/profile.php",
+                "data" => [
+                    "topics" => $topics,
+                    "posts" => $posts
+                ]
+            ];
 
-            // }
+        }
 }
