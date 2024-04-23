@@ -1,7 +1,7 @@
 <section id="HomePage_header">
     <div id="titre_homePage">
-        <h1> Welcome to Fetalk </h1>
-        <h3> The forum where you free to talk </h3>
+        <h1> Welcome to Freetalk </h1>
+        <h3> The forum where you feel free to talk </h3>
     </div>
 </section>
 
