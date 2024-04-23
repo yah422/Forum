@@ -1,4 +1,6 @@
-<?php $users = $result['data']['users'];?>
+<?php 
+$users = $result['data']['users'];
+?>
 
     <h1> Utilisateurs : </h1>
 <?php

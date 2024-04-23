@@ -1,12 +1,13 @@
 <?php
         $posts = $result['data']['posts'];
         $topic = $result['data']['topic'];
+        $users = $result['data']['users'];
 ?>
 
 <div id="titreTopic">
     <h1 id="h1Topic"><?= $topic->getName()?></h1>
     <h2><?= $topic->getQuestion()?></h2>
-    <p><a href="index.php?ctrl=security&action=login">Log in</a> to edit a post</p>
+    <p><a href="index.php?ctrl=security&action=login">Se connecter pour modifier un post</a></p>
 </div>
 
 <div id="postsWrap">
@@ -20,13 +21,13 @@
         ?>
                 <p><?=$post->getContent()?></p>
                 <p><?=$post->getCreationDate()?></p>
-                <p><?=$post->getUser()->getUserName()?></p>
+                <p><a href="index.php?ctrl=user&action=listTopicsAndPostsByUser&id=<?= $post->getUser()->getId()?>"><?=$post->getUser()->getUserName()?></a></p>
 
             <?php
                 if(isset($_SESSION['user'])){
                     
                     if(App\Session::isAdmin()){
-                            // var_dump($_SESSION['user']);die;
+                        //     var_dump($_SESSION['user']);die;
         ?>
                         <button><a href="index.php?ctrl=post&action=deletePost&id=<?=  $post->getId() ?>">Delete this post</a></button>
             <?php
@@ -53,11 +54,11 @@
                         ?>              
                         <div class="form-add">
 
-                                <h3>Edit a post</h3>
+                                <h3>Modifier un post</h3>
                 
                                 <form enctype="multipart/data" action="index.php?ctrl=post&action=addPost&id=<?=$id?>" method="post">
                 
-                                        <label for="content">Content</label>
+                                         <label for="content">Content</label>
                                         <textarea name="content" id="content"></textarea>
                 
                                 <input type="submit" name="submitPost">

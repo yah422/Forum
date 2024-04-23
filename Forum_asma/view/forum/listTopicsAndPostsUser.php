@@ -15,7 +15,6 @@
             foreach($topics as $topic){
                 echo "<p>".$topic->getName()."</p>";
                 echo "<p>".$topic->getCreationDate()."</p>";
-                echo "<p>".$topic->getUser()."</p>";
             }
         }
 ?>
@@ -36,9 +35,8 @@
             foreach($posts as $post){
                 echo "<p>".$post->getContent()."</p>";
                 echo "<p>".$post->getCreationDate()."</p>";
-                echo "<p>".$post->getUser()."</p>";
             }
         }
             ?>
-    <button><a href='index.php?ctrl=admin&action=listUsers'>Retour à utilisateur</a></button>
+    <button><a href='index.php?ctrl=forum&action=index'> Retour à la liste des catégories </a></button>
     </div>

@@ -19,8 +19,10 @@
         public function listPostsByTopics($id){
             $postManager = new PostManager();
             $topicManager = new TopicManager();
+            $userManager = new UserManager();
 
             $topic =  $topicManager->findOneById($id);
+            $users =  $userManager->findAll(['registerDate', 'DESC']);
 
             if($topic) {
                 return [
@@ -28,7 +30,8 @@
                     "view" => VIEW_DIR."forum/listPost.php",
                     "data" => [
                     "posts" => $postManager->postsByTopic($id),
-                    "topic" => $topic
+                    "topic" => $topic,
+                    "users" => $users
                     ]
                 ];
             }

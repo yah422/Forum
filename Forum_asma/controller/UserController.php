@@ -26,7 +26,7 @@
                 "view" => VIEW_DIR."forum/listTopicsAndPostsUser.php",
                 "data" => [
                     "topics" => $topicManager->listTopicsByUser($id),
-                    "posts" =>$postManager->listPostsByUser($id)
+                    "posts" =>$postManager->listPostsByUser($id),
                     // "users" =>$userManager->listUsers($id)
                     ]
             ];
