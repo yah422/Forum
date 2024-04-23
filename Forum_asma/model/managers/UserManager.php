@@ -19,7 +19,6 @@ class UserManager extends Manager{
 
     //Retrouver le password grâce à l'email
     public function retrievePassword($email){
-        parent::connect();
 
         $sql = "SELECT password FROM ".$this->tableName." WHERE ".$this->tableName.".email = :email";
 
@@ -32,7 +31,6 @@ class UserManager extends Manager{
 
     //Retrouver un user grâce à son email
     public function findOneByEmail($email){
-        parent::connect();
 
         $sql = "SELECT * FROM ".$this->tableName." WHERE ".$this->tableName.".email = :email";
 
@@ -43,7 +41,6 @@ class UserManager extends Manager{
     }
 
     public function findOneByUser($user){
-        parent::connect();
 
         $sql = "SELECT * FROM ".$this->tableName." WHERE  ".$this->tableName.".username = :username";
 
