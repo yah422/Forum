@@ -17,8 +17,6 @@ class PostManager extends Manager{
      // récupérer tous les topics d'une catégorie spécifique (par son id)
      public function postsByTopic($id){
 
-        parent::connect();
-
         $sql = "SELECT * FROM ".$this->tableName." WHERE topic_id = :id";
 
         return $this->getMultipleResults(
@@ -27,8 +25,16 @@ class PostManager extends Manager{
         );
     }
 
+    // récupérer tous les posts d'un utilisateur spécifique (par son id)
     public function listPostsByUser($id){
-        
+
+        $sql = "SELECT * FROM ".$this->tableName." WHERE user_id = :id";
+
+        return $this->getMultipleResults(
+            DAO::select($sql, ['id'=>$id]),
+            $this->className
+        );
+
 
     }
 }
