@@ -286,3 +286,20 @@ color: white;
 #btC a{
     color: #09143B;
 }
+
+
+/* --------------------------------------- INSCRIPTION ----------------------------------- */
+
+/* index.php?ctrl=security&action=registration */
+
+#inscription {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+#inscription label {
+    display: flex;
+
+}

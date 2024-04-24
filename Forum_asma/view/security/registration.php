@@ -2,9 +2,9 @@
 
 ?>
 <div class="connexion">
-    <h1>Registration</h1>
+    <h1> INSCRIPTION </h1>
 
-    <form enctype=mutlitpart/form-data action="index.php?ctrl=security&action=registration" method="post">
+    <form id="inscription" enctype=mutlitpart/form-data action="index.php?ctrl=security&action=registration" method="post">
         
         <label for="username">Pseudonyme</label>
         <input type="text" name="username" required>
