@@ -7,12 +7,12 @@ use Model\Managers\UserManager;
 
 class SecurityController extends AbstractController implements ControllerInterface{
     // contiendra les méthodes liées à l'authentification : register, login et logout
-        public function index(){
-          
-        }
-    public function register () {
+    public function index(){
+        
+    }
 
-            
+    public function register () {
+        
         if(isset($_POST["submitRegistration"])){
 
             //on filtre les champs de saisie
@@ -27,4 +27,4 @@ class SecurityController extends AbstractController implements ControllerInterfa
     
     public function login () {}
     public function logout () {}
-}
+} 
