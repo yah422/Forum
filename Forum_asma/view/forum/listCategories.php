@@ -3,7 +3,7 @@
 $categories = $result["data"]['categories']; //récupère les données envoyées par le controller
     
 ?>
-    <h1>Categories</h1>
+    <h1 id="catTitre">Categories</h1>
     <div id="wrapTopic">
         <?php
             
