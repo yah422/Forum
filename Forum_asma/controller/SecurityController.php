@@ -53,6 +53,7 @@ class SecurityController extends AbstractController implements ControllerInterfa
                             $this->redirectTo('security', 'registration');
                         }
                     }
+                    header(location:"login.php");
                 }
             }
         }

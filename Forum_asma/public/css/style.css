@@ -189,15 +189,11 @@ nav {
     text-align: center;
     text-decoration: none;
     color: white;
-    color: #09143B;
 }
 
 #forum p {
     display: flex;
     flex-direction: row;
-    align-items: center;
-    align-content: center;
-    justify-content: space-around;
 }
 
 #catTitre {

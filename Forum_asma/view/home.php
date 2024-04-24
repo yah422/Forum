@@ -44,7 +44,7 @@
 
 <section>
     <p>
-        <a href="index.php?ctrl=security&action=login">Se connecter</a>
-        <a href="index.php?ctrl=security&action=registration">S'inscrire</a>
+        <a style="color: #09143B;" href="index.php?ctrl=security&action=login">Se connecter &nbsp; &nbsp;</a>
+        <a style="color: #09143B;" href="index.php?ctrl=security&action=registration">&nbsp; &nbsp; S'inscrire</a>
     </p>
 </section>
