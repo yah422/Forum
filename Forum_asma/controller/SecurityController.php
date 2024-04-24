@@ -115,6 +115,7 @@ class SecurityController extends AbstractController implements ControllerInterfa
                 Session::addFlash('erreur', $msg);
                 $this->redirectTo('forum');
                 }
+                // header(location:"profile.php");
 
             }
         }
