@@ -45,6 +45,6 @@
 <section>
     <p>
         <a href="index.php?ctrl=security&action=login">Se connecter</a>
-        <a href="index.php?ctrl=security&action=register">S'inscrire</a>
+        <a href="index.php?ctrl=security&action=registration">S'inscrire</a>
     </p>
 </section>

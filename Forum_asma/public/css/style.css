@@ -7,6 +7,12 @@
     font-family: "Poppins", sans-serif;
 }
 
+#forum {
+    height: auto;
+    margin-bottom: 100px;
+    margin-top: 50px;
+}
+
 #wrapper {
     background-color: #D7E0EA;
 }
@@ -17,6 +23,10 @@
     align-content: center;
     justify-content: center;
 
+}
+
+nav {
+    margin-top: 20px;
 }
 
 #nav-left {
@@ -175,10 +185,19 @@
 }
 
 #forum a {
+    /* display: flex; */
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    color: #09143B;
+}
+
+#forum p {
     display: flex;
-   text-align: center;
-   text-decoration: none;
-   color: white;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: space-around;
 }
 
 #catTitre {
@@ -196,6 +215,7 @@
 #listTopic {
     color: #09143B;
     margin-bottom: 15px;
+    margin-left: 15px;
 }
 
 
@@ -276,11 +296,17 @@ color: white;
 .titreH {
     margin-left: 30px;
     color: #09143B;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    
 }
 
 #btC {
     background-color: #D7E0EA;
     border: #D7E0EA;
+    font-size: large;
+    margin-top: 10px;
+    margin-left: 10px;
 }
 
 #btC a{
@@ -303,18 +329,13 @@ color: white;
     
 }
 
-#inscription label {
-    display: flex;
-
-}
-
 .inputInscription {
     width: 303px;
     height: 30px;
 }
 
 .connexion {
-    width: 650px;
+    width: 750px;
     height: auto;
     background-color: #09143B;
     color: white;
@@ -338,6 +359,24 @@ color: white;
     align-content: center;
     justify-content: center;
     align-items: center;
-    padding-top: 100px;
+    padding-top: 200px;
     padding-bottom: 50px;
+}
+
+#inputSubmit {
+    width: 150px;
+}
+
+.nameLabel {
+    align-self: flex-start;
+    margin-left: 225px;
+}
+
+#Connexion {
+    display: flex;
+    color: #09143B;
+}
+
+#Connexion a{
+    color: #09143B;
 }
