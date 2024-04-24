@@ -345,7 +345,7 @@ color: white;
     justify-content: center;
     align-items: center;
     margin-left: 0;
-    padding-top: 20px;
+    padding-top: 40px;
     
 }
 
@@ -375,4 +375,22 @@ color: white;
 
 #Connexion a{
     color: #09143B;
+}
+
+/* ------------------------------------ LOGIN -------------------------------------- */
+
+#connexionForm {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+    margin-top: 30px;
+}
+
+.labelConnect {
+    display: flex;
+    align-self: flex-start;
+    margin-left: 292px;
 }

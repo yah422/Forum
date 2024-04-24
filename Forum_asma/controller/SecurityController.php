@@ -63,6 +63,66 @@ class SecurityController extends AbstractController implements ControllerInterfa
         ];
     }
     
-    public function login () {}
+    public function login(){
+            
+        $userManager = new UserManager();
+
+        if(isset($_POST["submitLogin"])){
+
+            //on filtre les champs de saisie
+            $email = filter_input(INPUT_POST, "email", FILTER_SANITIZE_EMAIL, FILTER_VALIDATE_EMAIL);
+            $password = filter_input(INPUT_POST, "password", FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+
+            if($email && $password){
+            //on recherche le mot de passe associé à l'adresse mail
+                $dbPass = $userManager->retrievePassword($email);
+
+                if($dbPass){
+
+                    //récupération du mot de
+                    $hash = $dbPass->getPassword();
+                    //on recherche l'utilisateur rattaché à l'adresse mail
+                    $user = $userManager->findOneByEmail($email);
+
+                    //on vérifie que les mots de passe concordent (password_verify)
+                    if(password_verify($password, $hash)){
+
+                        //on stocke l'user en Session (setUser dans App\Session)
+                        Session::setUser($user);
+                        
+                        if(isset($_SESSION["user"])){
+
+                            $msg = "You are connected !";
+                            Session::addFlash('success', $msg);
+
+                            $userId = $user->getId();
+                            
+                            $this->redirectTo('forum', $userId);
+                          
+                        }        
+                    } else {
+
+                        $msg = "Invalid email or password";
+                        Session::addFlash('error', $msg);
+
+                        $this->redirectTo('forum');
+
+                    }
+                } 
+                else{
+                
+                $msg = "Invalid email or password";
+                Session::addFlash('error', $msg);
+                $this->redirectTo('forum');
+                }
+
+            }
+        }
+        return [
+                "view" => VIEW_DIR."security/login.php", 
+        ];
+    }
+
+    
     public function logout () {}
 } 
