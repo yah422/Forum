@@ -92,7 +92,7 @@ class SecurityController extends AbstractController implements ControllerInterfa
                         
                         if(isset($_SESSION["user"])){
 
-                            $msg = "You are connected !";
+                            $msg = "Vous êtes connecter !";
                             Session::addFlash('success', $msg);
 
                             $userId = $user->getId();
@@ -102,8 +102,8 @@ class SecurityController extends AbstractController implements ControllerInterfa
                         }        
                     } else {
 
-                        $msg = "Invalid email or password";
-                        Session::addFlash('error', $msg);
+                        $msg = "Email ou Mot de passe invalide";
+                        Session::addFlash('erreur', $msg);
 
                         $this->redirectTo('forum');
 
@@ -111,8 +111,8 @@ class SecurityController extends AbstractController implements ControllerInterfa
                 } 
                 else{
                 
-                $msg = "Invalid email or password";
-                Session::addFlash('error', $msg);
+                $msg = "Email ou Mot de passe invalide";
+                Session::addFlash('erreur', $msg);
                 $this->redirectTo('forum');
                 }
 
@@ -123,6 +123,6 @@ class SecurityController extends AbstractController implements ControllerInterfa
         ];
     }
 
-    
+
     public function logout () {}
 } 
