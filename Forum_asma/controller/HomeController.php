@@ -1,9 +1,13 @@
 <?php
 namespace Controller;
 
+use App\Session;
 use App\AbstractController;
 use App\ControllerInterface;
+use Model\Managers\TopicManager;
+use Model\Managers\CategoryManager;
 use Model\Managers\UserManager;
+use Model\Managers\PostManager;
 
 class HomeController extends AbstractController implements ControllerInterface {
 
@@ -13,7 +17,7 @@ class HomeController extends AbstractController implements ControllerInterface {
             "meta_description" => "Page d'accueil du forum"
         ];
     }
-    
+
     public function users(){
         $this->restrictTo("ROLE_USER");
 

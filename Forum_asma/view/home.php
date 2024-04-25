@@ -7,33 +7,41 @@
 
 <section id="latestTopic">
 
-    <div id="div1">
+    <h2> Latest Topics </h2>
+    <div id="div22">
+        
+        <div id="div1">
 
-        <div class="lateTopic">
-            <p id="pHome" > HORROR </p>
+            <div class="lateTopic">
+                <p id="pHome"> HORROR </p>
+            </div>
+
+            <div class="lateTopic">
+                <p id="pHome"> MUSHROOMS </p> 
+            </div>
+
         </div>
 
-        <div class="lateTopic">
-            <p id="pHome" > MUSHROOMS</p>
-        </div>
+        <div id="div2">
 
+            <div class="lateTopic">
+            <p id="pHome"> DOGS </p> 
+            </div>
+
+            <div class="lateTopic">
+                <p id="pHome"> SPOILER ALERT </p> 
+            </div>
+
+        </div>
     </div>
-
-    <div id="div2">
-
-        <div class="lateTopic">
-            <p id="pHome" > DOGS </p>
-        </div>
-
-        <div class="lateTopic">
-            <p id="pHome" > SPOILER ALERT </p>
-        </div>
-
-    </div>
-
 </section>
 
 <section id="community">
+
+    <div>
+        <p>  </p>
+
+    </div>
 
 
 </section>

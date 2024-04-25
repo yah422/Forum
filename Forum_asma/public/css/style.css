@@ -100,16 +100,40 @@ nav {
     height: 350px;
     display: flex;
     flex-direction: row;
+    justify-content: flex-start;
+    gap: 200px;
+
+}
+
+#latestTopic h2{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  align-self: flex-start;
+  margin-left: 30px;
+  align-self: flex-start;
+  font-size: 40px;
+  color:  #09143B;
+
+}
+
+
+#pHome {
+    color: white;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    font-size: larger;
+}
+
+#div22{
+    display: flex;
+    flex-direction: row;
     align-content: center;
     justify-content: center;
     align-items: center;
     gap: 250px;
 
-}
-
-#pHome {
-    color: white;
-    align-items: center;
 }
 
 #community {
