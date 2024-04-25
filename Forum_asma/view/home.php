@@ -9,7 +9,7 @@
 
     <h2> Latest Topics </h2>
     <div id="div22">
-        
+
         <div id="div1">
 
             <div class="lateTopic">
@@ -48,17 +48,41 @@
 
 <section id="Discover">
 
+    <div id="contient">
+
+        <div id="partText">
+            <h3> Discover a great collection of post variations </h3>
+            <p> The Forum activity allows students and teachers to exchange ideas by posting comments as part of a thread. 
+                Files such as images and media maybe included in forum posts. 
+                The teacher can choose to grade and/or rate forum posts and it is also possible to give students permission to rate each others posts. 
+            </p>
+        </div>
+
+        <div id="partImg">
+            <img src="public/images/imgHomePage.png" alt="imageForum">
+        </div>
+        
+    </div>
+
 
 </section>
 
 <section id="Activate">
+    <div id="contient">
 
+        <div id="partImg">
+            <img style="margin-left: 100px;" src="public/images/imgActivate.png" alt="imageForum">
+        </div>
 
-</section>
+        <div style="margin-left:0;" id="partText">
 
-<section>
-    <p>
-        <a style="color: #09143B;" href="index.php?ctrl=security&action=login">Se connecter &nbsp; &nbsp;</a>
-        <a style="color: #09143B;" href="index.php?ctrl=security&action=registration">&nbsp; &nbsp; S'inscrire</a>
-    </p>
+            <h3> Activate daily notifications and never miss a thing </h3>
+
+            <p> Please make sure you read the forum guidelines and Frequently Asked Questions before contributing to WordPress support, 
+                both when asking for and giving support, this helps maintain a friendly and welcoming atmosphere for all involved.
+                 I asked this writer for a guest post, which he seemed happy to write for me. 
+            </p>
+
+        </div>
+    </div>
 </section>

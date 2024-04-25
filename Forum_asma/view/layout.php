@@ -53,7 +53,7 @@
                 </main>
             </div>
             <footer>
-                <p>&copy; <?= date_create("now")->format("Y") ?> - <a href="#">Règlement du forum</a> - <a href="#">Mentions légales</a></p>
+                <p style="color: white;" >&copy; <?= date_create("now")->format("Y") ?> - <a style="text-decoration:none; color: white;" href="#">Règlement du forum</a> - <a style="text-decoration:none; color: white;" href="#">Mentions légales</a></p>
             </footer>
         </div>
         <script
