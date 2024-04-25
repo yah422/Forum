@@ -13,21 +13,28 @@ namespace App;
 
 abstract class AbstractController{
 
+    // Méthode index avec une implémentation vide
     public function index() {}
 
+    // Méthode pour rediriger vers une autre page
     public function redirectTo($ctrl = null, $action = null, $id = null){
 
+        // Construction de l'URL de redirection en fonction des paramètres
         $url = $ctrl ? "?ctrl=".$ctrl : "";
         $url.= $action ? "&action=".$action : "";
         $url.= $id ? "&id=".$id : "";
 
+        // Redirection vers l'URL générée
         header("Location: $url");
         die();
     }
 
+    // Méthode pour restreindre l'accès basée sur le rôle de l'utilisateur
     public function restrictTo($role){
         
+        // Vérification si l'utilisateur n'est pas connecté ou n'a pas le rôle requis
         if(!Session::getUser() || !Session::getUser()->hasRole($role)){
+            // Redirection vers la page de connexion
             $this->redirectTo("security", "login");
             
             // OU 
@@ -40,3 +47,4 @@ abstract class AbstractController{
     }
 
 }
+?>
