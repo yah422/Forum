@@ -6,23 +6,29 @@
 </section>
 
 <section id="latestTopic">
+
     <div id="div1">
-        <div class="lateTopic">
 
+        <div class="lateTopic">
+            <p id="pHome" > HORROR </p>
         </div>
 
         <div class="lateTopic">
-
+            <p id="pHome" > MUSHROOMS</p>
         </div>
+
     </div>
+
     <div id="div2">
-        <div class="lateTopic">
 
+        <div class="lateTopic">
+            <p id="pHome" > DOGS </p>
         </div>
 
         <div class="lateTopic">
-
+            <p id="pHome" > SPOILER ALERT </p>
         </div>
+
     </div>
 
 </section>

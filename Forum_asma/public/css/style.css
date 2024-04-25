@@ -107,6 +107,11 @@ nav {
 
 }
 
+#pHome {
+    color: white;
+    align-items: center;
+}
+
 #community {
     width: 100%;
     height: 100px;

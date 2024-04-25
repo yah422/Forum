@@ -22,9 +22,9 @@
 </div>  
 
 <div id="Connexion">
-    <a href="index.php?ctrl=security&action=login">
-        <p>Vous avez déjà un compte ? &nbsp; &nbsp;</p>
-        <p>  &nbsp; &nbsp; Se connecter</p> 
+    <a href="index.php?ctrl=security&action=registration">
+        <p>Vous n'avez encore un compte ? &nbsp; &nbsp;</p>
+        <p>  &nbsp; &nbsp; S'inscrire</p> 
     </a> 
 </div>
 </div>
