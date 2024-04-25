@@ -33,13 +33,32 @@ class Session{
     /**
     *   met un user dans la session (pour le maintenir connecté)
     */
+    // public function users(){
+
+    //     $this->restrictTo("ROLE_USER");
+
+    //     $manager = new UserManager();
+    //     $users = $manager->findAll(['register_date', 'DESC']);
+
+    //     return [
+    //         "view" => VIEW_DIR."security/users.php",
+    //         "meta_description" => "Liste des utilisateurs du forum",
+    //         "data" => [ 
+    //             "users" => $users 
+    //         ]
+    //     ];
+    // }
+
+
     public static function setUser($user){
         $_SESSION["user"] = $user;
     }
 
+
     public static function getUser(){
         return (isset($_SESSION['user'])) ? $_SESSION['user'] : false;
     }
+
 
     public static function isAdmin(){
         // attention de bien définir la méthode "hasRole" dans l'entité User en fonction de la façon dont sont gérés les rôles en base de données

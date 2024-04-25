@@ -79,7 +79,7 @@ class SecurityController extends AbstractController implements ControllerInterfa
 
                 if($dbPass){
 
-                    //récupération du mot de
+                    //récupération du mot de passe
                     $hash = $dbPass->getPassword();
                     //on recherche l'utilisateur rattaché à l'adresse mail
                     $user = $userManager->findOneByEmail($email);
@@ -125,5 +125,17 @@ class SecurityController extends AbstractController implements ControllerInterfa
     }
 
 
-    public function logout () {}
+    public function logout () {
+
+        if(isset($_SESSION["user"])){
+
+            unset($_SESSION['user']);
+            $msg = "Disconnected";
+            Session::addFlash('error', $msg);
+
+            $this->redirectTo('forum');
+            // header("Location: index.php?ctrl=home&action=home");
+        
+        }
+    }
 } 
