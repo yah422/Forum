@@ -11,7 +11,7 @@
         if(!isset($topics)){
             ?>
                 <p>0 topic poster</p>
-    </div>   
+     
      <?php
     } else {
         foreach($topics as $topic){
@@ -23,7 +23,7 @@
         }
     }
     ?>
-
+    </div>  
     <br>
 
     <div class="partsProfil">
