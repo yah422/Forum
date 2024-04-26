@@ -24,7 +24,7 @@
                             <?php
                             if(App\Session::isAdmin()){
                                 ?>
-                                <a href="index.php?ctrl=home&action=users">Voir la liste des gens</a>
+                                <a href="index.php?ctrl=admin&action=listUsers">Voir la liste des gens</a>
                             <?php } ?>
                         </div>
                         <div id="nav-right">
@@ -32,7 +32,7 @@
                             // si l'utilisateur est connecté 
                             if(App\Session::getUser()){
                                 ?>
-                                <a href="index.php?ctrl=security&action=profile"><span class="fas fa-user"></span>&nbsp;<?= App\Session::getUser()?></a>
+                                <a href="index.php?ctrl=user&action=userProfile&id=<?= App\Session::getUser()->getId()?>"><span class="fas fa-user"></span>&nbsp;<?= App\Session::getUser()?></a>
                                 <a href="index.php?ctrl=security&action=logout">Déconnexion</a>
                                 <?php
                             }
