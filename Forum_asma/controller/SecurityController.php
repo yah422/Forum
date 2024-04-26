@@ -42,15 +42,15 @@
                                 //on ajoute l'user en bdd (pas besoin d'id car autoincrement)
                                 $userManager->add(["username" => $username, "email" =>$email, "password" => $passwordHash]);
 
-                                $msg = "Session created !";
-                                Session::addFlash('success', $msg);
+                                $msg = "Session crée !";
+                                Session::addFlash('succès', $msg);
 
                                 //on redirige vers le formulaire de login dans la foulée
                                 $this->redirectTo('security', 'login');
                             } else {                                
                                 
-                                $msg = "Invalid password !";
-                                Session::addFlash('error', $msg);
+                                $msg = "Mot de passe invalide !";
+                                Session::addFlash('erreur', $msg);
 
                                 $this->redirectTo('security', 'registration');
                             }
@@ -76,12 +76,12 @@
 
             if($email && $password){
             //on recherche le mot de passe associé à l'adresse mail
-                $dbPass = $userManager->retrievePassword($email);
+                $dPass = $userManager->retrievePassword($email);
 
-                if($dbPass){
+                if($dPass){
 
                     //récupération du mot de
-                    $hash = $dbPass->getPassword();
+                    $hash = $dPass->getPassword();
                     //on recherche l'utilisateur rattaché à l'adresse mail
                     $user = $userManager->findOneByEmail($email);
 
@@ -93,8 +93,8 @@
                         
                         if(isset($_SESSION["user"])){
 
-                            $msg = "You are connected !";
-                            Session::addFlash('success', $msg);
+                            $msg = "Vous êtes connecter !";
+                            Session::addFlash('succès', $msg);
 
                             $userId = $user->getId();
                             
@@ -103,8 +103,8 @@
                         }        
                     } else {
 
-                        $msg = "Invalid email or password";
-                        Session::addFlash('error', $msg);
+                        $msg = "Mot de passe ou email invalide";
+                        Session::addFlash('erreur', $msg);
 
                         $this->redirectTo('forum');
 
@@ -112,8 +112,8 @@
                 } 
                 else{
                 
-                $msg = "Invalid email or password";
-                Session::addFlash('error', $msg);
+                $msg = "Mot de passe ou email invalide";
+                Session::addFlash('erreur', $msg);
                 $this->redirectTo('forum');
                 }
 
