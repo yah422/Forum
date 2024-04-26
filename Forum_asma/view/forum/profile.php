@@ -2,7 +2,7 @@
     $topics = $result['data']['topics'];
     $posts = $result['data']['posts'];
 ?>
-    <h1> Votre Profil <?=  App\Session::getUser()->getUsername() ?> !</h1>
+    <h1 id="h1profilName"> Votre Profil <?=  App\Session::getUser()->getUsername() ?> !</h1>
    
     <div class="partsProfil">
         <h2>Vos topics :</h2>
