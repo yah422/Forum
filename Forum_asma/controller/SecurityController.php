@@ -129,8 +129,8 @@
         if(isset($_SESSION["user"])){
 
             unset($_SESSION['user']);
-            $msg = "Disconnected";
-            Session::addFlash('error', $msg);
+            $msg = "Déconnecter";
+            Session::addFlash('erreur', $msg);
 
             $this->redirectTo('forum');
             // header("Location: index.php?ctrl=home&action=home");
