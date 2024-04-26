@@ -69,25 +69,25 @@
         $userManager = new UserManager();
 
         if(isset($_POST["submitLogin"])){
-
+        
             //on filtre les champs de saisie
             $email = filter_input(INPUT_POST, "email", FILTER_SANITIZE_EMAIL, FILTER_VALIDATE_EMAIL);
             $password = filter_input(INPUT_POST, "password", FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 
             if($email && $password){
             //on recherche le mot de passe associé à l'adresse mail
-                $dPass = $userManager->retrievePassword($email);
+                $dbPass = $userManager->retrievePassword($email);
 
-                if($dPass){
-
+                if($dbPass){
+                
                     //récupération du mot de
-                    $hash = $dPass->getPassword();
+                    $hash = $dbPass->getPassword();
                     //on recherche l'utilisateur rattaché à l'adresse mail
                     $user = $userManager->findOneByEmail($email);
-
+        
                     //on vérifie que les mots de passe concordent (password_verify)
                     if(password_verify($password, $hash)){
-
+                    //  var_dump($password);die;
                         //on stocke l'user en Session (setUser dans App\Session)
                         Session::setUser($user);
                         
@@ -99,7 +99,7 @@
                             $userId = $user->getId();
                             
                             $this->redirectTo('forum', $userId);
-                          
+                                                 
                         }        
                     } else {
 

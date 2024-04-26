@@ -25,6 +25,11 @@
     <a href="index.php?ctrl=security&action=registration">
         <p>Vous n'avez encore un compte ? &nbsp; &nbsp;</p>
         <p>  &nbsp; &nbsp; S'inscrire</p> 
+        
     </a> 
 </div>
 </div>
+<?php 
+    
+    // var_dump($_SESSION["username"]);
+    // var_dump($_SESSION["user"]);

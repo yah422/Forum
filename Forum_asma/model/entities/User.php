@@ -82,6 +82,23 @@ final class User extends Entity{
         return $this;
     }
 
+    // CREATION DE LA FUNCTION HAS ROLE
+    public function hasRole($role){
+        if( $this->role == $role){
+            return true;
+
+    } else {
+
+            return false;
+
+        };
+    }
+
+    //  METHODE TOO STRING POUR USERNAME
+    public function __toString(){
+        return $this->username;
+    }
+
     // GET ET SET DE EMAIL
     public function getEmail(){
         return $this->email;
