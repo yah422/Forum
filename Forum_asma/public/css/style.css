@@ -159,6 +159,10 @@ nav {
     height: 65px;
     background-color: #09143B;
     border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
 }
 
 #div1 {

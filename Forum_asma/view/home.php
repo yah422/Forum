@@ -12,26 +12,32 @@
 
         <div id="div1">
 
-            <div class="lateTopic">
+            <a href="index.php?ctrl=post&action=listPostsByTopics&id=1">
+                <div class="lateTopic">
                 <p id="pHome"> HORROR </p>
-            </div>
+                </div>
+            </a>
 
-            <div class="lateTopic">
-                <p id="pHome"> MUSHROOMS </p> 
-            </div>
-
+            <a href="index.php?ctrl=post&action=listPostsByTopics&id=2">
+                <div class="lateTopic">
+                    <p id="pHome"> MUSHROOMS </p> 
+                </div>
+            </a>
         </div>
 
         <div id="div2">
 
+        <a href="index.php?ctrl=post&action=listPostsByTopics&id=4">
             <div class="lateTopic">
             <p id="pHome"> DOGS </p> 
             </div>
+        </a>
 
+        <a href="index.php?ctrl=post&action=listPostsByTopics&id=19">
             <div class="lateTopic">
                 <p id="pHome"> SPOILER ALERT </p> 
             </div>
-
+        </a>
         </div>
     </div>
 </section>
