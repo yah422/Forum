@@ -40,7 +40,7 @@
                                 ?>
                                 <a href="index.php?ctrl=security&action=login">Connexion</a>
                                 <a href="index.php?ctrl=security&action=registration">Inscription</a>
-                                <a href="index.php?ctrl=forum&action=index">Liste des catégories &nbsp; &nbsp;</a>
+                                <a href="index.php?ctrl=forum&action=index">Liste des Catégories &nbsp; &nbsp;</a>
                             <?php
                             }
                         ?>

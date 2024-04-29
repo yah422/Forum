@@ -48,10 +48,11 @@
         <p> Community </p>
     </div>
 
-    <div>
-        <p>New Post</p>
-    </div>
-
+    <a href="">
+        <div>
+            <p>New Post</p>
+        </div>
+    </a>
 
 </section>
 

@@ -27,7 +27,7 @@
             if($topic) {
                 return [
                     "metaDescription" => "Liste des posts par topic",
-                    "view" => VIEW_DIR."forum/listPost.php",
+                    "view" => VIEW_DIR."forum/listPosts.php",
                     "data" => [
                     "posts" => $postManager->postsByTopic($id),
                     "topic" => $topic,
@@ -36,4 +36,69 @@
                 ];
             }
         }
+
+        // ajout d'un post par l'id
+        public function addPost($id){
+            $postManager = new PostManager();
+        
+            $userId = Session::getUser()->getId();
+        
+            if(isset($_POST['submitPost'])){
+                $content = filter_input(INPUT_POST, "content", FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+        
+                if($content){
+                    $postManager->add(["content" => $content, "topic_id" => $id, "user_id" => $userId]);
+                    $msg = "Post added";
+                    Session::addFlash('success', $msg);
+                    header("Location: index.php?ctrl=post&action=listPostsByTopics&id=.'$id'.");
+                }
+            }
+        
+            return [
+                "view" => VIEW_DIR. "forum/listPosts.php"
+            ];
+        }
+        
+        public function updatePost($id){
+
+            $postManager = new PostManager();
+            
+            
+            if(isset($_POST['submitUpdatePost'])){
+                
+                $content = filter_input(INPUT_POST, "content", FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+                
+                if($content){
+
+                    $postManager->updatePost($id, $content);
+
+                    $msg = "Post modifier !";
+                    Session::addFlash('success', $msg);
+                    
+                    $this->redirectTo('forum');
+                    
+                }
+            }
+                return [
+                    "view" => VIEW_DIR."forum/updatePost.php",
+                    "data" => [
+                        "post" => $postManager->findOneById($id),
+                        
+                    ]
+            ];
+        }
+
+        public function deletePost($id){
+
+            $postManager = new PostManager();
+
+            $postManager->delete($id);
+
+            $msg = "Votre Post a été supprimé";
+            Session::addFlash('error', $msg);
+
+            $this->redirectTo('forum');
+            // $this->redirectTo('post', 'listPostsByTopics', $id);
+        }
+
     }

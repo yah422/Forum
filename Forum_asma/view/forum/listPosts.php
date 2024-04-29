@@ -36,7 +36,7 @@
                         <button><a href="index.php?ctrl=post&action=deletePost&id=<?=  $post->getId() ?>">Delete</a></button>
             <?php
                     } else {
-                            ?><button>Report this post</button><?php
+                            ?><button>Signaler le post</button><?php
                     }
                 }
             }
