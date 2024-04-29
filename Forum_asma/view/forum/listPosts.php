@@ -32,8 +32,8 @@
             <?php
                     } elseif(App\Session::getUser() == $post->getUser()){
             ?>
-                        <button><a href="index.php?ctrl=post&action=updatePost&id=<?=  $post->getId() ?>">Update</a></button>
-                        <button><a href="index.php?ctrl=post&action=deletePost&id=<?=  $post->getId() ?>">Delete</a></button>
+                        <button><a href="index.php?ctrl=post&action=updatePost&id=<?=  $post->getId() ?>"> Modifier </a></button>
+                        <button><a href="index.php?ctrl=post&action=deletePost&id=<?=  $post->getId() ?>"> Supprimer </a></button>
             <?php
                     } else {
                             ?><button>Signaler le post</button><?php
