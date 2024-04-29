@@ -45,8 +45,11 @@
 <section id="community">
 
     <div>
-        <p>  </p>
+        <p> Community </p>
+    </div>
 
+    <div>
+        <p>New Post</p>
     </div>
 
 
