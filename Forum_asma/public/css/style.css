@@ -341,7 +341,7 @@ color: white;
 }
 
 #h1Topic {
-    margin-left: 60px;
+    /* margin-left: 60px; */
     margin-top: 10px;
     margin-bottom: 10px;
 }
@@ -505,4 +505,23 @@ color: white;
 
 #h1profilName {
     margin: 30px;
+}
+
+/* ^^-------------------------------- LISTE POST USER PART ----------------------------------- */
+
+#form-add {
+    display: flex;
+    flex-direction: column;
+    margin-left: 60px;
+    margin-top: 20px;
+}
+
+#formContent {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+#envoyerSubmit {
+    width: 100px;
 }

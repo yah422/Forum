@@ -58,16 +58,16 @@
                 if($topic->getClosed() !== 1){
 
                         ?>              
-                        <div class="form-add">
+                        <div id="form-add">
 
                                 <h3>Modifier un post</h3>
-                
-                                <form enctype="multipart/data" action="index.php?ctrl=post&action=addPost&id=<?=$id?>" method="post">
+                <br>
+                                <form id="formContent" enctype="multipart/data" action="index.php?ctrl=post&action=addPost&id=<?=$id?>" method="post">
                 
                                          <label for="content">Content</label>
                                         <textarea name="content" id="content"></textarea>
-                
-                                <input type="submit" name="submitPost">
+                <br>
+                                <input id="envoyerSubmit" type="submit" name="submitPost">
                 
                         </form>
 
