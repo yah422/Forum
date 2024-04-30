@@ -8,8 +8,12 @@
     <h1 id="h1Topic"><?= $topic->getName()?></h1>
     <h2><?= $topic->getQuestion()?></h2>
     
-</div>
+</div>        
+
+<p id="log"><a href="index.php?ctrl=security&action=login">Se connecter pour modifier un post</a></p>
+
 <div id="postsWrap">
+        
 
     <?php
         if($posts == null){
@@ -47,7 +51,6 @@
     ?>
 
 </div>
-        <p id="log"><a href="index.php?ctrl=security&action=login">Se connecter pour modifier un post</a></p>
 
 <?php
         if(isset($_SESSION['user'])){

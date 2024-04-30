@@ -28,6 +28,7 @@ class TopicManager extends Manager{
         );
     }
 
+    // Liste des topics par utilisateur
     public function listTopicsByUser($id){
         
         $sql = "SELECT *
@@ -39,5 +40,31 @@ class TopicManager extends Manager{
             $this->className
         );
 
+    }
+
+    // update d'un topic spécifique
+    public function updateTopic($id, $name, $question){
+
+        parent::connect();
+
+        $sql = "UPDATE topic 
+                SET name = :name, question = :question
+                WHERE id_topic = :id";
+
+            DAO::update($sql, [
+                'id'=>$id,
+                'name'=>$name,
+                'question'=> $question,
+            ]);
+    }
+
+    // supprimer un topic
+    public function deleteTopic($id){
+
+        parent::connect();
+
+        $sql = "DELETE FROM post WHERE topic_id = :id";
+
+        DAO::delete($sql, ['id'=>$id]);
     }
 }

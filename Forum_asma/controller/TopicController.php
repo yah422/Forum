@@ -48,4 +48,68 @@
                         ]
                 ];
         }
+
+        // ajouter un topic
+        public function addTopic($id){
+            $topicManager = new TopicManager();
+            $userManager = new UserManager();
+        
+            $userId = Session::getUser()->getId();
+        
+            if(isset($_SESSION['user'])){
+                
+                if(isset($_POST['submitTopic'])){
+                    $name = filter_input(INPUT_POST, "name", FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+                    $question = filter_input(INPUT_POST, "question", FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+        
+                    if($name && $question){
+                        $topicManager->add(["name" => $name, "question" =>$question, "category_id" => $id, "user_id" => $userId]);
+        
+                        $msg = "Topic added !";
+                        Session::addFlash('success', $msg);
+                        header("Location: index.php?ctrl=topic&action=listTopicsByCategory&id=$id");
+        
+                        // Pas besoin de l'id_topic puisque c'est en auto increment dans la base de données, l'id en cours est celui de la categorie, creationDate a déjà une valeur par défaut
+                        return [
+                            "view" => VIEW_DIR. "forum/listTopics.php"
+                        ];
+                    }
+                }
+            }
+        }
+        
+        // modifier un Topic
+        public function updateTopic($id){
+
+            $topicManager = new TopicManager();
+
+            if(isset($_POST['updateTopic'])){
+                $name = filter_input(INPUT_POST, "name", FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+                $question = filter_input(INPUT_POST, "question", FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+                
+                if($name && $question){
+                    
+                    $topicManager->updateTopic($id, $name, $question);
+
+                    $msg = "Topic modifier !";
+                    Session::addFlash('success', $msg);
+                    
+                    $this->redirectTo('forum');
+                } else {
+
+                    $msg = "Error !";
+                    Session::addFlash('error', $msg);
+                    
+                    $this->redirectTo('forum');
+                }
+            }
+                return [
+                        "view" => VIEW_DIR."forum/updateTopic.php", //Interaction avec la vue
+                        "data" => [
+                            "topics" => $topicManager->findOneById($id)
+                        ]
+                ];
+        }
+
+
     }

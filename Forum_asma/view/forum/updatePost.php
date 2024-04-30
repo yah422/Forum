@@ -4,7 +4,7 @@
     // var_dump($post);
 ?>
 
-    <h3><a href="index.php?ctrl=topic&action=updatePost&id=<?=$id?>">UPDATE POST</a></h3>
+    <h3><a href="index.php?ctrl=topic&action=updatePost&id=<?=$id?>"> MODIFICATION POST </a></h3>
 
 <!-- Nom du topic -->
 
