@@ -149,6 +149,11 @@ nav {
 
 }
 
+#community p {
+    font-size: 30px;
+    margin-left: 60px;
+}
+
 #Discover {
     width: 100%;
     height: 700px;
