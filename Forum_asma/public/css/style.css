@@ -412,6 +412,11 @@ color: white;
     align-items: center;
 }
 
+#updateSupp a {
+    color: #09143B;
+
+}
+
 /* ^^--------------------------------------- INSCRIPTION ----------------------------------- */
 
 /* !index.php?ctrl=security&action=registration */
