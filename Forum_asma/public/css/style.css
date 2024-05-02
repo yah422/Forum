@@ -20,8 +20,9 @@
 #mainpage {
     display: flex;
     flex-direction: column;
+    height: 120vh;
     align-content: center;
-    justify-content: center;
+    justify-content: flex-start;
 
 }
 
