@@ -26,3 +26,20 @@ if($topics == null){
 <?php }
 }?>
 </div>
+
+<div>
+    <button style="    
+    background-color: #09143B;
+    width: 200px;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+    border-radius: 15px;
+    padding: 5px;"> <a  href="  "> Ajouter un Topic </a></button>
+    <!-- !!!!!! ajouter une views qui doit etre cree avant et ensuite ajouter la redirection -->
+
+</div>
