@@ -41,7 +41,7 @@
         public function addPost($id){
             $postManager = new PostManager();
             $userId = Session::getUser()->getId();
-            
+            // ajout condition dans le if pour éviter que la page ne crash 
             if(isset($_POST['submitPost'])){
                 $content = filter_input(INPUT_POST, "content", FILTER_SANITIZE_FULL_SPECIAL_CHARS);
                 
