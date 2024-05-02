@@ -64,7 +64,7 @@
                 <br>
                                 <form id="formContent" enctype="multipart/data" action="index.php?ctrl=post&action=addPost&id=<?=$id?>" method="post">
                 
-                                         <label for="content">Content</label>
+                                         <label for="content"> Contenu </label>
                                         <textarea name="content" id="content"></textarea>
                 <br>
                                 <input id="envoyerSubmit" type="submit" name="submitPost">
@@ -74,7 +74,7 @@
                         </div>
                         <?php
                 } else {
-                        echo "Topic closed";
+                        echo "Topic fermé";
                 }
         }
         

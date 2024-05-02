@@ -30,6 +30,4 @@
 </div>
 </div>
 <?php 
-    
-    // var_dump($_SESSION["username"]);
     // var_dump($_SESSION["user"]);
