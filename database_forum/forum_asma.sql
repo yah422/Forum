@@ -5,7 +5,6 @@
 -- HeidiSQL Version:             12.1.0.6537
 -- --------------------------------------------------------
 
-
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET NAMES utf8 */;
 /*!50503 SET NAMES utf8mb4 */;
@@ -48,7 +47,7 @@ CREATE TABLE IF NOT EXISTS `post` (
   KEY `FK__topic_post` (`topic_id`),
   CONSTRAINT `FK__topic_post` FOREIGN KEY (`topic_id`) REFERENCES `topic` (`id_topic`),
   CONSTRAINT `FK__user_post` FOREIGN KEY (`user_id`) REFERENCES `user` (`id_user`)
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
 
 -- Listage des données de la table forum_asma.post : ~14 rows (environ)
 INSERT INTO `post` (`id_post`, `content`, `creationDate`, `user_id`, `topic_id`) VALUES
@@ -65,7 +64,11 @@ INSERT INTO `post` (`id_post`, `content`, `creationDate`, `user_id`, `topic_id`)
 	(11, 'Think about Titanic', '2023-09-08 15:01:32', 1, 5),
 	(12, 'They are demons', '2023-09-08 15:03:44', 1, 4),
 	(13, 'Mushrooms are great', '2023-09-08 15:04:48', 1, 7),
-	(14, 'Use balloons', '2023-09-08 15:06:48', 4, 20);
+	(14, 'Use balloons', '2023-09-08 15:06:48', 4, 20),
+	(16, 'eat a lot of protein\r\n', '2024-05-02 13:50:55', 9, 6),
+	(17, 'nowwww', '2024-05-02 13:52:24', 10, 25),
+	(18, 'test 2', '2024-05-02 14:23:50', 10, 25),
+	(20, 'zrgr', '2024-05-02 16:50:28', 10, 6);
 
 -- Listage de la structure de table forum_asma. topic
 CREATE TABLE IF NOT EXISTS `topic` (
@@ -110,19 +113,20 @@ CREATE TABLE IF NOT EXISTS `user` (
   `password` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL DEFAULT '0',
   `registerDate` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id_user`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
 
--- Listage des données de la table forum_asma.user : ~7 rows (environ)
+-- Listage des données de la table forum_asma.user : ~10 rows (environ)
 INSERT INTO `user` (`id_user`, `username`, `role`, `email`, `password`, `registerDate`) VALUES
 	(1, 'Samuel', 'user', 'samuel@hotmail.fr', '123', '2023-09-06 00:00:00'),
 	(2, 'Jenna', 'user', 'jenna@hotmail.fr', '123', '2023-09-06 00:00:00'),
 	(3, 'Chloe', 'user', 'chloe@hotmail.fr', '123', '2023-09-06 00:00:00'),
 	(4, 'Mike', 'user', 'mike@hotmail.fr', '123', '2023-09-06 00:00:00'),
 	(5, 'Heloise', 'user', 'heloise@hotmail.fr', '123', '2023-09-06 00:00:00'),
-	(6, 'yooo', '0', 'ASMA.SAIDI@stagiaire.fr', '$2y$10$k93a4/A3cA5qc.V6AViv2ul/hP/oZtRkiKJfK7kQ7KI2lJkWI2LTa', '2024-04-24 11:34:12'),
+	(6, 'yooo', 'admin', 'ASMA.SAIDI@stagiaire.fr', '$2y$10$k93a4/A3cA5qc.V6AViv2ul/hP/oZtRkiKJfK7kQ7KI2lJkWI2LTa', '2024-04-24 11:34:12'),
 	(7, 'asmi', '0', 'asmi@hotmail.fr', '$2y$10$dE.NzH6mnoR9doyT05TyzOJsHsgsjau1X8uu3yBKoJ2fujBaHN9Tu', '2024-04-26 11:17:29'),
 	(8, 'asmo', '0', 'asmo@hotmail.fr', '$2y$10$sXv7YSKme.lJt2vv5nNaKeG3p1NJQsXnZilZDBys/.07.7SeIpsOC', '2024-04-26 11:39:57'),
-	(9, 'Asma', '0', 'sasma@hotmail.fr', '$2y$10$esMgKKOnBIn8cNxEqVnW4u.0sqWhaU9PQUBo7bfi4YKjAruJnjxxe', '2024-04-26 16:35:52');
+	(9, 'Asma', '0', 'sasma@hotmail.fr', '$2y$10$esMgKKOnBIn8cNxEqVnW4u.0sqWhaU9PQUBo7bfi4YKjAruJnjxxe', '2024-04-26 16:35:52'),
+	(10, 'azer', 'admin', 'azer@hotmail.fr', '$2y$10$.5zjYGIQkhBM1iWMGifEXuiwALhrsDPltAAgat1YztwTLgfsb7a8m', '2024-05-02 13:51:59');
 
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
