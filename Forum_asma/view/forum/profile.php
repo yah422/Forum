@@ -10,7 +10,7 @@
         <?php
         if(!isset($topics)){
             ?>
-                <p>0 topic poster</p>
+                <p>0 topic posté</p>
      
      <?php
     } else {
@@ -33,7 +33,7 @@
         <?php
             if(!isset($posts)){
         ?>
-                <p>0 topic poster</p>
+                <p>0 topic posté</p>
 
         <?php
         } else {
