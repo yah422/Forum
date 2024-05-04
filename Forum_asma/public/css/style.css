@@ -538,17 +538,41 @@ color: white;
 }
 
 /* ^^ -----------------------------  UPDATE POST  --------------------------------------- */
+#wrapperUpdatePost{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: #09143B;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
 .lastPost{
     display: flex;
-
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 60px;
+    margin-bottom: 30px;
+    margin-top: 15px;
+    color: white;
 }
 
 #modifForm{
     display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 60px;
+    color: white;
 }
 
 #h3update{
     display: flex;
-    color: #09143B;
+    /* color: #09143B; */
     margin-left: 60px;
 }
