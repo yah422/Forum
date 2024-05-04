@@ -4,7 +4,7 @@
     // var_dump($post);
 ?>
 
-    <h3><a href="index.php?ctrl=topic&action=updatePost&id=<?=  $post->getId() ?>"> MODIFICATION POST </a></h3>
+    <h3><a id="h3update" href="index.php?ctrl=topic&action=updatePost&id=<?=  $post->getId() ?>"> MODIFICATION POST </a></h3>
 
 <!-- Nom du topic -->
 
@@ -17,7 +17,7 @@
 
     </div>
 
-        <form action="index.php?ctrl=post&action=updatePost&id=<?=  $post->getId() ?>" method="post" enctype="multipart/form-data">
+        <form id="modifForm" action="index.php?ctrl=post&action=updatePost&id=<?=  $post->getId() ?>" method="post" enctype="multipart/form-data">
 
             <label for="content">Content</label>
             <textarea name="content" id="content"><?= $post->getContent() ?></textarea>

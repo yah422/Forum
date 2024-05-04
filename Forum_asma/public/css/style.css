@@ -536,3 +536,19 @@ color: white;
 #envoyerSubmit {
     width: 100px;
 }
+
+/* ^^ -----------------------------  UPDATE POST  --------------------------------------- */
+.lastPost{
+    display: flex;
+
+}
+
+#modifForm{
+    display: flex;
+}
+
+#h3update{
+    display: flex;
+    color: #09143B;
+    margin-left: 60px;
+}
