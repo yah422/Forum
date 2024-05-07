@@ -37,15 +37,14 @@
                     if(App\Session::isAdmin()){
                         //     var_dump($_SESSION['user']);die;
         ?>
-                        <button><a href="index.php?ctrl=post&action=deletePost&id=<?=  $post->getId() ?>">Delete this post</a></button>
+                        <button><a href="index.php?ctrl=post&action=deletePost&id=<?=  $post->getId() ?>"> Supprimer ce post </a></button>
             <?php
                     } elseif(App\Session::getUser() == $post->getUser()){
             ?>
                 <div id="updateSupp">
-                &nbsp;&nbsp;<button><a href="index.php?ctrl=post&action=updatePost&id=<?=  $post->getId() ?>">&nbsp; Modifier &nbsp;</a></button>
+                        &nbsp;&nbsp;<button><a href="index.php?ctrl=post&action=updatePost&id=<?=  $post->getId() ?>">&nbsp; Modifier &nbsp;</a></button>
                         &nbsp;&nbsp;&nbsp;
-                        
-                        <button><a href="index.php?ctrl=post&action=deletePost&id=<?=  $post->getId() ?>">&nbsp; Supprimer &nbsp;</a></button>
+                        <a href="index.php?ctrl=post&action=deletePost&id=<?=  $post->getId() ?>">&nbsp; <input type="submit" name="action" id="Delete" value=" Supprimer " onClick="return confirm('Vous êtes sûre de vouloir supprimer ?')?this.form.action='<?php echo $_SERVER['PHP_SELF'] ?>':false;">&nbsp;</a></button>
                 </div>
                 
                 <?php
@@ -83,5 +82,12 @@
                 } else {
                         echo "Topic fermé";
                 }
+        }?>
+<!-- <script>
+        function confirmDelete(link) {
+                if (confirm("Etes vous sûre ?")) {
+                doAjax(link.href, "POST"); // doAjax needs to send the "confirm" field
+                }
+                return false;
         }
-        
+</script> -->

@@ -75,7 +75,7 @@ nav {
 }
 #HomePage_header {
     width: 100%;
-    height: 800px;
+    height: 850px;
     background-color: #09143B;
     display: flex;
     flex-direction: column;
@@ -396,6 +396,8 @@ button{
     
     border-radius: 10px;
     background-color: #09143B;
+    width: 100px;
+    height: 34px;
 }
 
 /* ^^----------------------------- LIST POSTS AND TOPICS BY USER  -------------------------- */
@@ -469,7 +471,8 @@ textarea#content{
 #name{
     background-color: white;
     border: none;
-    width: 643px;
+    width: auto;
+    color: #09143B;
 }
 
 #question {
@@ -500,6 +503,7 @@ textarea#content{
     padding: 5px;
     /* width: 100px; */
     color: #09143B;
+    border: none;
 }
 
 .connexion {
@@ -556,12 +560,14 @@ input.inputConnexion{
     /* width: 100px; */
     color: #09143B;
     width: 200px;
+    border: none;
 }
 
 #inputSubmitInscription{
     background-color: white;
     color: #09143B;
     width: 150px;
+    border: none;
 }
 
 /* ^^------------------------------------ LOGIN -------------------------------------- */
@@ -602,7 +608,7 @@ input.inputConnexion{
 #form-add {
     display: flex;
     flex-direction: column;
-    margin-left: 60px;
+    margin-left: 15px;
     margin-top: 20px;
 }
 

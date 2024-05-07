@@ -68,7 +68,7 @@
 
             $postManager = new PostManager();
             $topicId = $postManager->findOneById($id)->getTopic()->getId();
-            // var_dump($topicId);die;
+          
             
             
             if(isset($_POST['submitUpdatePost'])){
@@ -94,7 +94,7 @@
                         
                     ]
             ];
-            
+
         }
         
 
@@ -111,5 +111,5 @@
             header("Location: index.php?ctrl=post&action=listPostsByTopics&id=".$topicId); 
             // $this->redirectTo('post', 'listPostsByTopics', $id);
         }
-
+        
     }
