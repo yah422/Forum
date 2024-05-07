@@ -578,6 +578,14 @@ color: white;
 }
 
 /* ^^ ----------------------------------- ADD TOPIC ----------------------------------- */
+#sectionTopicChangement{
+    width: 100%;
+    height: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #09143B;
+}
+
 #form-addTopic{
     display: flex;
     margin-left: 15px;

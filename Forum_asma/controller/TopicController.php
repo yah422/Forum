@@ -68,7 +68,8 @@
                         $msg = "Topic ajouté !";
                         Session::addFlash('success', $msg);
                         // header("Location: index.php?ctrl=topic&action=addTopic");
-                        $this->redirectTo("topic", "addTopic");
+                        // $this->redirectTo("topic", "addTopic");
+                        header("Location: index.php?ctrl=topic&action=listTopicsByCategory&id=$id");
         
                         // Pas besoin de l'id_topic puisque c'est en auto increment dans la base de données, l'id en cours est celui de la categorie, creationDate a déjà une valeur par défaut
                         return [
