@@ -25,13 +25,51 @@ if($topics == null){
 
 <?php }
 }?>
-</div>
+<?php
+    //Formulaire d'ajout de topic
+    if(isset($_SESSION['user'])){
 
-<div>
+        if($topics == null){
+
+            echo "0 topic yet";
+        ?>
+        <div class="form-add">
+
+            <form action="index.php?ctrl=topic&action=addTopic&id=<?= $id ?>" method="post" enctype="multipart/form-data">
+
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name">
+
+            <label for="question">Question</label>
+            <textarea name="question" id="question"></textarea>
+
+            <input type="submit" name="submitTopic">
+            
+        </form>
+
+        </div>
+        <?php
+        }else {
+            ?>
+            </div>
+
+<div id="form-addTopic">
+    <h3>Add a topic</h3>
     
-    <button style="background-color: #09143B;width: 200px;height: 100%;display: flex;flex-direction: row;align-content: center;justify-content: center;align-items: center;margin: 30px;border-radius: 15px;padding: 5px;"> 
-        <a  href="index.php?ctrl=topic&action=ajoutTopic"> Ajouter un Topic </a>
-    </button>
-    <!-- !!!!!! ajouter une views qui doit etre cree avant et ensuite ajouter la redirection -->
+            <form id="TopicChange" action="index.php?ctrl=topic&action=addTopic&id=<?= $id ?>" method="post" enctype="multipart/form-data">
+    
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name">
+    
+                <label for="question">Question</label>
+                <textarea name="question" id="question"></textarea>
+    <br>
+                <input type="submit" name="submitTopic">
+                
+            </form>
 
-</div>
+        </div>
+
+    <?php
+    }
+}

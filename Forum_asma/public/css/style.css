@@ -576,3 +576,20 @@ color: white;
     /* color: #09143B; */
     margin-left: 60px;
 }
+
+/* ^^ ----------------------------------- ADD TOPIC ----------------------------------- */
+#form-addTopic{
+    display: flex;
+    margin-left: 15px;
+    margin-top: 20px;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#TopicChange{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 50%;
+}
