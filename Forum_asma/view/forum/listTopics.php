@@ -26,7 +26,8 @@ if($topics == null){
 <?php }
 }?>
 
-<section id="sectionTopicChangement">
+
+
 <?php
     //Formulaire d'ajout de topic
     if(isset($_SESSION['user'])){
@@ -35,6 +36,7 @@ if($topics == null){
 
             echo "0 topic yet";
         ?>
+
         <div class="form-add">
 
             <form action="index.php?ctrl=topic&action=addTopic&id=<?= $id ?>" method="post" enctype="multipart/form-data">
@@ -57,6 +59,7 @@ if($topics == null){
 
 <div id="form-addTopic">
     <h3> Ajout d'un topic </h3>
+    <br>
     
             <form id="TopicChange" action="index.php?ctrl=topic&action=addTopic&id=<?= $id ?>" method="post" enctype="multipart/form-data">
     
@@ -75,4 +78,5 @@ if($topics == null){
     <?php
     }
 }?>
-</section>
+
+</div>
