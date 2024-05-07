@@ -20,7 +20,7 @@
         <input class="inputInscription" type="password" name="confirmPassword" required>
 <br>
 <br>
-        <input id="inputSubmit" type="submit" value="S'inscrire" name="submitRegistration">
+        <input id="inputSubmitInscription" type="submit" value="S'inscrire" name="submitRegistration">
 
     </form>
 

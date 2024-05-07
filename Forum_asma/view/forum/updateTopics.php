@@ -15,6 +15,6 @@ $topics = $result["data"]['topics'];
             <label for="question">Question</label>
             <textarea name="question" id="question"><?= $topics->getQuestion() ?></textarea>
 
-            <input type="submit" name="updateTopic">
+            <input id="updateSubmit" type="submit" name="updateTopic">
             
         </form>

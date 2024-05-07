@@ -34,8 +34,16 @@
                         if(!$userManager->findOneByUser($username)){
 
                             //on vérifie que les 2 passwords correspondent
+                            // regex de restriction de mot de passe 
                             if($password == $confirmPassword){
+                                $uppercase = preg_match('@[A-Z]@', $password);
+                                $lowercase = preg_match('@[a-z]@', $password);
+                                $number    = preg_match('@[0-9]@', $password);
 
+                                if(!$uppercase || !$lowercase || !$number || strlen($password) < 8) {
+                                // tell the user something went wrong
+                                echo "Le mot de passe doit contenir au moins 8 caractères, une majuscule et un chiffre";
+                                
                                 //on hash le password (password_hash)
                                 $passwordHash = password_hash($password, PASSWORD_DEFAULT);
                                 // var_dump($passwordHash);
@@ -47,7 +55,7 @@
 
                                 //on redirige vers le formulaire de login dans la foulée
                                 $this->redirectTo('security', 'login');
-                            } else {                                
+                            }} else {                                
                                 
                                 $msg = "Mot de passe invalide !";
                                 Session::addFlash('erreur', $msg);

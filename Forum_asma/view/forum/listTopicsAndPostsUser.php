@@ -5,16 +5,19 @@
 
     <h2 class="titreH">Topics crée par cet utilisateur </h2>
 
-    <div class="divTopPost">
+    <div >
 
         <?php
 
         if($topics == NULL){
             echo "0 topic";
         } else {
-            foreach($topics as $topic){
+            foreach($topics as $topic){?>
+            <div class="divTopPost"><?php
                 echo "<p>".$topic->getName()."</p>";
-                echo "<p>".$topic->getCreationDate()."</p>";?> <br><?php
+                echo "<p>".$topic->getCreationDate()."</p>";?> <br>
+            </div>
+<?php
             }
         }
 ?>
@@ -22,7 +25,7 @@
     </div>
     <h2 class="titreH">Posts crée par cet utilisateur</h2>
 
-    <div class="divTopPost">
+    <div >
 
         <?php
 
@@ -32,9 +35,12 @@
 
         <?php
         } else {
-            foreach($posts as $post){
+            foreach($posts as $post){?>
+            <div class="divTopPost"><?php
                 echo "<p>".$post->getContent()."</p>";
-                echo "<p>".$post->getCreationDate()."</p>";?> <br><?php
+                echo "<p>".$post->getCreationDate()."</p>";?> <br>
+            </div>
+        <?php
             }
         }
             ?>

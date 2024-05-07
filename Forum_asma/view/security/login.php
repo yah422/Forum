@@ -15,7 +15,7 @@
         <input class="inputConnexion" type="password" name="password" required>
 <br>
 <br>
-        <input id="inputSubmit" type="submit" value="Se connecter" name="submitLogin">
+        <input id="inputSubmitInscription" type="submit" value="Se connecter" name="submitLogin">
 
     </form>
 

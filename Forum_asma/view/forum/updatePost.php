@@ -23,7 +23,7 @@
 
             <textarea name="content" id="content"><?= $post->getContent() ?></textarea>
             <br>
-            <input href="index.php?ctrl=topic&action=updatePost&id=<?=  $post->getId() ?>" type="submit" name="submitUpdatePost">
+            <input Value="Modifier" id="updateSubmit" href="index.php?ctrl=topic&action=updatePost&id=<?=  $post->getId() ?>" type="submit" name="submitUpdatePost">
             
         </form>
 </section>

@@ -369,20 +369,44 @@ color: white;
     align-content: center;
     justify-content: center;
     align-items: flex-start;
-    padding-left: 60px;
+    /* padding-left: 60px;
     width: 100%;
     background-color: #09143B;
     color: white;
     padding-bottom: 30px;
-    padding-top: 30px;
+    padding-top: 30px; */
+}
+
+#wrapContentEtUser{
+    display: flex;
+    flex-direction: row-reverse;
+    align-content: center;
+    align-items: flex-start;
+    padding-left: 60px;
+    width: 100%;
+    background-color: #09143B;
+    color: white;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    padding-top: 20px;
+    padding-right: 60px;
+    justify-content: space-between;
+}
+button{
+    
+    border-radius: 10px;
+    background-color: #09143B;
 }
 
 /* ^^----------------------------- LIST POSTS AND TOPICS BY USER  -------------------------- */
 
-.divTopPost {
+div.divTopPost {
     width: 100%;
     background-color: #D9D9D9;
-    padding: 30px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    padding-top: 20px;
+    padding-left: 30px;
 }
 
 .titreH {
@@ -413,9 +437,44 @@ color: white;
     align-items: center;
 }
 
+input{
+    border-radius: 10px;
+    background-color: #09143B;
+    color: white;
+    padding: 5px;
+    width: 100px;
+
+}
+
 #updateSupp a {
+    color: white;
+    padding: 5px;
+
+}
+
+#updateSubmit{
+    border-radius: 10px;
+    background-color: #D7E0EA;
     color: #09143B;
 
+}
+
+textarea#content{
+    width: 500px;
+    height: 80px;
+    border: none;
+    border-radius: 10px;
+}
+
+#name{
+    background-color: white;
+    border: none;
+    width: 643px;
+}
+
+#question {
+    border: none;
+    border-radius: 10px;
 }
 
 /* ^^--------------------------------------- INSCRIPTION ----------------------------------- */
@@ -435,7 +494,12 @@ color: white;
 
 .inputInscription {
     width: 303px;
-    height: 30px;
+    /* height: 30px; */
+    border-radius: 10px;
+    background-color: white;
+    padding: 5px;
+    /* width: 100px; */
+    color: #09143B;
 }
 
 .connexion {
@@ -483,6 +547,21 @@ color: white;
 
 #Connexion a{
     color: #09143B;
+}
+
+input.inputConnexion{
+    border-radius: 10px;
+    background-color: white;
+    padding: 5px;
+    /* width: 100px; */
+    color: #09143B;
+    width: 200px;
+}
+
+#inputSubmitInscription{
+    background-color: white;
+    color: #09143B;
+    width: 150px;
 }
 
 /* ^^------------------------------------ LOGIN -------------------------------------- */

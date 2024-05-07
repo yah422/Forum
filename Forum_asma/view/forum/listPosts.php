@@ -22,10 +22,15 @@
 
             foreach($posts as $post){
         ?>
-                <p><?=$post->getContent()?></p>
-                <p><?=$post->getCreationDate()?></p>
-                <p><a href="index.php?ctrl=user&action=listTopicsAndPostsByUser&id=<?= $post->getUser()->getId()?>"><?=$post->getUser()->getUserName()?></a></p><br>
-
+        <div id="wrapContentEtUser">
+                <div class="content">
+                        <p><?=$post->getContent()?></p>
+                </div>
+                <div class="InfosUsers">
+                        <p><?=$post->getCreationDate()?></p>
+                        <p><a href="index.php?ctrl=user&action=listTopicsAndPostsByUser&id=<?= $post->getUser()->getId()?>"><?=$post->getUser()->getUserName()?></a></p><br>
+                </div>
+        </div>
             <?php
                 if(isset($_SESSION['user'])){
                     
@@ -37,13 +42,15 @@
                     } elseif(App\Session::getUser() == $post->getUser()){
             ?>
                 <div id="updateSupp">
-                        <button><a href="index.php?ctrl=post&action=updatePost&id=<?=  $post->getId() ?>">&nbsp; Modifier &nbsp;</a></button>
+                &nbsp;&nbsp;<button><a href="index.php?ctrl=post&action=updatePost&id=<?=  $post->getId() ?>">&nbsp; Modifier &nbsp;</a></button>
+                        &nbsp;&nbsp;&nbsp;
+                        
                         <button><a href="index.php?ctrl=post&action=deletePost&id=<?=  $post->getId() ?>">&nbsp; Supprimer &nbsp;</a></button>
                 </div>
                 
                 <?php
                     } else {
-                            ?><button>Signaler le post</button><?php
+                            ?> <?php
                     }
                 }
             }
@@ -67,7 +74,7 @@
                                          <label for="content"> Contenu </label>
                                         <textarea name="content" id="content"></textarea>
                 <br>
-                                <input id="envoyerSubmit" type="submit" name="submitPost">
+                                <input id="envoyerSubmit" type="submit" name="submitPost" value="Poster">
                 
                         </form>
 
