@@ -31,29 +31,30 @@
         
                         // On vérifie que le pseudo n'existe pas
                         if (!$userManager->findOneByUser($username)) {
-        
+                            // var_dump($username);die;
                             // On vérifie que les 2 passwords correspondent
                             if ($password == $confirmPassword) {
+                                
                                 // Regex de restriction de mot de passe
-                                if (preg_match('/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/', $password)) {
-                                    // var_dump($username);die;
-                                    // On hash le password (password_hash)
-                                    $passwordHash = password_hash($password, PASSWORD_DEFAULT);
-        
-                                    // On ajoute l'user en bdd (pas besoin d'id car autoincrement)
-                                    $userManager->add(["username" => $username, "email" => $email, "password" => $passwordHash]);
-        
-                                    $msg = "Session créée !";
-                                    Session::addFlash('succès', $msg);
-        
-                                    // On redirige vers le formulaire de login dans la foulée
-                                    $this->redirectTo('security', 'login');
-                                } else {
-                                    $msg = "Le mot de passe doit contenir au moins 8 caractères, une majuscule et un chiffre";
-                                    Session::addFlash('erreur', $msg);
-        
-                                    $this->redirectTo('security', 'registration');
-                                }
+                        
+                                
+                                // On hash le password (password_hash)
+                                $passwordHash = password_hash($password, PASSWORD_DEFAULT);
+    
+                                // On ajoute l'user en bdd (pas besoin d'id car autoincrement)
+                                $userManager->add(["username" => $username, "email" => $email, "password" => $passwordHash]);
+    
+                                $msg = "Session créée !";
+                                Session::addFlash('succès', $msg);
+    
+                                // On redirige vers le formulaire de login dans la foulée
+                                $this->redirectTo('security', 'login');
+                            } else {
+                                $msg = "Le mot de passe doit contenir au moins 8 caractères, une majuscule et un chiffre";
+                                Session::addFlash('erreur', $msg);
+    
+                                $this->redirectTo('security', 'registration');
+                                
                             }
                         }
                     }
