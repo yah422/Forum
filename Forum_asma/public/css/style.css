@@ -20,7 +20,7 @@
 #mainpage {
     display: flex;
     flex-direction: column;
-    height: 120vh;
+    min-height: 120vh;
     align-content: center;
     justify-content: flex-start;
 
