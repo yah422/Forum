@@ -1,5 +1,4 @@
 <?php
-
     namespace Controller;
 
     use App\Session;
@@ -41,6 +40,7 @@
         public function addPost($id){
             $postManager = new PostManager();
             $userId = Session::getUser()->getId();
+
             // ajout condition dans le if pour éviter que la page ne crash 
             if(isset($_POST['submitPost'])){
                 $content = filter_input(INPUT_POST, "content", FILTER_SANITIZE_FULL_SPECIAL_CHARS);
@@ -51,6 +51,7 @@
                     Session::addFlash('success', $msg);
                     header("Location: index.php?ctrl=post&action=listPostsByTopics&id=$id");
                     exit; // Ajout pour arrêter l'exécution du script après la redirection
+
                 } else {
                     $msg = "Le contenu du post est vide";
                     Session::addFlash('error', $msg);
@@ -63,10 +64,11 @@
             ];
         }
         
-        
         public function updatePost($id){
 
             $postManager = new PostManager();
+            $topicId = $postManager->findOneById($id)->getTopic()->getId();
+            // var_dump($topicId);die;
             
             
             if(isset($_POST['submitUpdatePost'])){
@@ -77,13 +79,14 @@
 
                     $postManager->updatePost($id, $content);
 
-                    $msg = "Post modifier !";
+                    $msg = "Post modifié !";
                     Session::addFlash('success', $msg);
                     
-                    $this->redirectTo('forum');
-                    
+                    // $this->redirectTo('post', 'listPostsByTopics', $id);  
+                    header("Location: index.php?ctrl=post&action=listPostsByTopics&id=".$topicId);                  
                 }
             }
+                
                 return [
                     "view" => VIEW_DIR."forum/updatePost.php",
                     "data" => [
@@ -91,18 +94,21 @@
                         
                     ]
             ];
+
         }
+        
 
         public function deletePost($id){
 
             $postManager = new PostManager();
+            $topicId = $postManager->findOneById($id)->getTopic()->getId();
 
             $postManager->delete($id);
 
             $msg = "Votre Post a été supprimé";
             Session::addFlash('error', $msg);
 
-            $this->redirectTo('forum');
+            header("Location: index.php?ctrl=post&action=listPostsByTopics&id=".$topicId); 
             // $this->redirectTo('post', 'listPostsByTopics', $id);
         }
 
