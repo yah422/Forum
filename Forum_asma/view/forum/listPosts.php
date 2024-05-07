@@ -83,11 +83,3 @@
                         echo "Topic fermé";
                 }
         }?>
-<!-- <script>
-        function confirmDelete(link) {
-                if (confirm("Etes vous sûre ?")) {
-                doAjax(link.href, "POST"); // doAjax needs to send the "confirm" field
-                }
-                return false;
-        }
-</script> -->
