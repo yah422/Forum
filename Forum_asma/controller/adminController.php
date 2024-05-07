@@ -30,4 +30,19 @@ class HomeController extends AbstractController implements ControllerInterface{
             ]
         ];
     }
+
+    public function ban($id){
+
+        $userManager = new UserManager();
+
+        $ban = $userManager->ban($id);
+
+        $this->redirectTo('admin', 'listUsers');
+
+        return [
+            "metaDescription" => "Users List",
+            "view" => VIEW_DIR."security/listUsers.php"
+        ];
+    }
+
 }
