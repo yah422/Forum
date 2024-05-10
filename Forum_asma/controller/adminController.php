@@ -45,4 +45,18 @@ class HomeController extends AbstractController implements ControllerInterface{
         ];
     }
 
+    public function deban($id){
+
+        $userManager = new UserManager();
+
+        $deban = $userManager->deban($id);
+
+        $this->redirectTo('admin', 'listUsers');
+        
+        return [
+            "metaDescription" => "Users List",
+            "view" => VIEW_DIR."security/listUsers.php"
+        ];
+    }
+
 }
