@@ -59,12 +59,13 @@ class Session{
         return (isset($_SESSION['user'])) ? $_SESSION['user'] : false;
     }
 
-
     public static function isAdmin(){
-        // attention de bien définir la méthode "hasRole" dans l'entité User en fonction de la façon dont sont gérés les rôles en base de données
-        if(self::getUser() && self::getUser()->hasRole("ROLE_ADMIN")){
+        $user = self::getUser(); // Récupère l'utilisateur depuis la session
+    
+        if($user && $user->hasRole("ROLE_ADMIN")){ // Vérifie si l'utilisateur existe et s'il a le rôle d'administrateur
             return true;
         }
         return false;
     }
+    
 }
