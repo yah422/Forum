@@ -65,6 +65,11 @@ nav {
 
 }
 
+#aListUser{
+    display: flex;
+    width: 100px;
+}
+
 #titre_homePage {
     display: flex;
     flex-direction: column;
@@ -392,12 +397,23 @@ color: white;
     padding-right: 60px;
     justify-content: space-between;
 }
+
 button{
-    
     border-radius: 10px;
     background-color: #09143B;
-    width: 100px;
+    width: auto;
     height: 34px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#divUsersList{
+    padding-left: 30px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #09143B;
 }
 
 /* ^^----------------------------- LIST POSTS AND TOPICS BY USER  -------------------------- */

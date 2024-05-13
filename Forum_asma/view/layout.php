@@ -20,11 +20,11 @@
                 <header>
                     <nav>
                         <div id="nav-left">
-                            <a href="./"> &nbsp; &nbsp; Accueil</a>
+                            <a href="./"> &nbsp; &nbsp; Accueil &nbsp; &nbsp;</a>
                             <?php
                             if(App\Session::isAdmin()){
                                 ?>
-                                <a href="index.php?ctrl=admin&action=listUsers">Voir la liste des gens</a>
+                                <a href="index.php?ctrl=admin&action=listUsers">&nbsp; &nbsp; Voir la liste des gens</a>
                             <?php } ?>
                         </div>
                         <div id="nav-right">

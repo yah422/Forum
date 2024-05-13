@@ -7,11 +7,13 @@ $users = $result['data']['users'];
 
     foreach($users as $user){
 
-?>
-        <p>Pseudonyme :<b> <?= $user->getUsername()?></b></p>
+?>  
+    <div id="divUsersList">
+        <p>Pseudonyme : <b> <?= $user->getUsername()?></b></p>
         <p>Email : <?= $user->getemail()?></p>
         <p>Date d'inscription : <i><?= $user->getRegisterDate()?></i></p>
 
-        <button><a href="index.php?ctrl=user&action=listTopicsAndPostsByUser&id=<?= $user->getId()?>">Topics et Posts</a></button>
-    
+        <button><a id="aListUser" href="index.php?ctrl=user&action=listTopicsAndPostsByUser&id=<?= $user->getId()?>">Topics et Posts</a></button>
+    </div>
+
     <?php }
