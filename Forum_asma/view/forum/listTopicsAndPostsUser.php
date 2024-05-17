@@ -5,12 +5,12 @@
 
     <h2 class="titreH">Topics crée par cet utilisateur </h2>
 
-    <div >
+    <div style="margin-left: 30px;">
 
         <?php
 
         if($topics == NULL){
-            echo "0 topic";
+            echo " 0 topic ";
         } else {
             foreach($topics as $topic){?>
             <div class="divTopPost"><?php
