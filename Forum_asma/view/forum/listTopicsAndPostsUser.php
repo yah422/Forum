@@ -6,7 +6,7 @@
 
 <h2 class="titreH">Topics créés par cet utilisateur</h2>
 
-<div style="margin-left: 30px;">
+<div >
     <?php
     // Vérification si l'utilisateur a des topics
     if($topics == NULL){
