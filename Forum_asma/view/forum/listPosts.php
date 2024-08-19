@@ -10,7 +10,9 @@
     
 </div>        
 
-<p id="log"><a href="index.php?ctrl=security&action=login">Se connecter pour modifier un post</a></p>
+<?php if (!App\Session::getUser()) { ?>
+    <p id="log"><a href="index.php?ctrl=security&action=login">Se connecter pour modifier un post</a></p>
+<?php } ?>
 
 <div id="postsWrap">
         
