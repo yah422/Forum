@@ -9,8 +9,7 @@
 
 #forum {
     height: auto;
-    margin-bottom: 100px;
-    /* margin-top: 50px; */
+    /* margin-bottom: 100px; */
 }
 
 #wrapper {
@@ -81,13 +80,13 @@ nav {
 #HomePage_header {
     width: 100%;
     height: 850px;
-    padding-top: 100px;
     background-color: #09143B;
     display: flex;
     flex-direction: column;
     align-content: center;
     justify-content: flex-start;
     align-items: center;
+    padding-top: 100px;
 }
 
 #titre_homePage h1 {
