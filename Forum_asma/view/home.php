@@ -1,8 +1,21 @@
 <section id="HomePage_header">
+
     <div id="titre_homePage">
         <h1> Welcome to Freetalk </h1>
         <h3> The forum where you feel free to talk </h3>
     </div>
+
+    <!-- <div class="navbar">
+
+        <form id="tailleform" action="" method="get">
+        <label for="email"> </label>
+        <input type="email" id="email" name="email"  placeholder="Enter your email " required>
+        </form>
+        <form  id="taillesub" action="" method="get">
+        <input class="sub" type="submit" value="SUBSCRIBE" />
+        </form>
+                
+    </div> -->
 </section>
 
 <section id="latestTopic">
