@@ -21,14 +21,12 @@ Forum Connect est une plateforme d'échanges moderne permettant aux utilisateurs
 
 **Frontend**  
 - HTML5 sémantique pour une structure accessible
-- JavaScript Vanilla
-- TailwindCSS
+- CSS
 - Design responsive pour tous les appareils  
 
 **Backend**  
 - PHP procédural pour la logique métier  
 - Système de routage personnalisé
-- Symfony 
 - Gestion des sessions utilisateurs  
 
 ## 🚀 Guide d'installation
