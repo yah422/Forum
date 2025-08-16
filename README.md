@@ -1,8 +1,6 @@
 # 💬 Forum Connect - Plateforme d'Échanges Communautaire
 <img width="1534" height="1250" alt="image" src="https://github.com/user-attachments/assets/179b975f-39dc-441f-a858-1715ad9df301" />
 
-![Bannière Forum Connect](https://github.com/yah422/Forum/assets/148782301/72df662c-46d8-4a9a-ae28-e7c6f0ea46f2)
-
 ## 🌐 Une communauté à portée de clic
 
 Forum Connect est une plateforme d'échanges moderne permettant aux utilisateurs de discuter, partager et débattre sur divers sujets à travers des fils de discussion organisés.
@@ -53,7 +51,6 @@ Ouvrir index.php dans votre navigateur
 
 <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; margin: 20px 0;">
     <img src="https://github.com/yah422/Forum/assets/148782301/72df662c-46d8-4a9a-ae28-e7c6f0ea46f2" alt="Page d'accueil" style="border-radius: 8px; border: 1px solid #eee;">
-    <img src="lien_vers_autre_maquette" alt="Page de discussion" style="border-radius: 8px; border: 1px solid #eee;">
 </div>
 
 ## 🔮 Évolutions envisagées
